@@ -8,6 +8,11 @@
   <meta name="description" content="Request Hawaii mainland moving quote options for moves between Hawaii and the continental U.S., including Hawaii to California, Texas, Florida, Nevada and mainland-to-Hawaii relocations." />
   <link rel="canonical" href="https://routes.modelmoving.com/hawaii-mainland-moving-quotes/" />
 
+  <link rel="icon" href="https://routes.modelmoving.com/ModelMoving-Logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://routes.modelmoving.com/ModelMoving-Logo.png">
+  <meta property="og:image" content="https://routes.modelmoving.com/ModelMoving-Logo.png">
+  <meta name="twitter:image" content="https://routes.modelmoving.com/ModelMoving-Logo.png">
+
   <style>
     :root {
       --navy: #102b4a;
@@ -53,15 +58,23 @@
     }
 
     .mark {
-      width: 48px;
-      height: 48px;
+      width: 54px;
+      height: 54px;
       border: 2px solid var(--gold);
       border-radius: 999px;
       display: grid;
       place-items: center;
-      color: var(--gold);
-      font-weight: 900;
-      font-size: 1.1rem;
+      overflow: hidden;
+      background: var(--navy-dark);
+      box-shadow: 0 8px 22px rgba(16,43,74,.16);
+      flex: 0 0 54px;
+    }
+
+    .mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .brand-title {
@@ -521,7 +534,7 @@
       h1 { font-size: 3.1rem; }
       .hero { min-height: auto; }
       .brand-title { font-size: 1.45rem; }
-      .mark { width: 42px; height: 42px; }
+      .mark { width: 44px; height: 44px; flex-basis: 44px; }
     }
   </style>
 
@@ -534,7 +547,12 @@
     "url": "https://routes.modelmoving.com/hawaii-mainland-moving-quotes/",
     "publisher": {
       "@type": "Organization",
-      "name": "ModelMoving"
+      "name": "ModelMoving",
+      "url": "https://modelmoving.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://routes.modelmoving.com/ModelMoving-Logo.png"
+      }
     }
   }
   </script>
@@ -544,7 +562,9 @@
 
   <header class="nav">
     <a href="https://modelmoving.com" class="brand">
-      <div class="mark">M</div>
+      <div class="mark">
+        <img src="https://routes.modelmoving.com/ModelMoving-Logo.png" alt="ModelMoving logo">
+      </div>
       <div>
         <div class="brand-title">Model Moving</div>
         <div class="brand-sub">Long-Distance Quote Help</div>
