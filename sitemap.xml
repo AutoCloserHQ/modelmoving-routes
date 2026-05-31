@@ -1,53 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://routes.modelmoving.com/</loc>
-    <lastmod>2026-05-30</lastmod>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://routes.modelmoving.com/northeast-long-distance-moving-quotes/</loc>
-    <lastmod>2026-05-30</lastmod>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://routes.modelmoving.com/midwest-long-distance-moving-quotes/</loc>
-    <lastmod>2026-05-30</lastmod>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://routes.modelmoving.com/cleveland-long-distance-moving-quotes/</loc>
-    <lastmod>2026-05-30</lastmod>
-    <priority>1.0</priority>
-  </url>
-
-    <url>
-    <loc>https://routes.modelmoving.com/detroit-long-distance-moving-quotes/</loc>
-    <lastmod>2026-05-30</lastmod>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://routes.modelmoving.com/new-jersey-long-distance-moving-quotes/</loc>
-    <lastmod>2026-05-30</lastmod>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://routes.modelmoving.com/hawaii-mainland-moving-quotes/</loc>
-    <lastmod>2026-05-30</lastmod>
-    <priority>1.0</priority>
-  </url>
-
-   <url>
-    <loc>https://routes.modelmoving.com/alaska-mainland-moving-quotes/</loc>
-    <lastmod>2026-05-30</lastmod>
-    <priority>1.0</priority>
-  </url>
-
-
+  <url><loc>https://routes.modelmoving.com/</loc></url>
+  <url><loc>https://routes.modelmoving.com/northeast-long-distance-moving-quotes/</loc></url>
+  <url><loc>https://routes.modelmoving.com/new-york-long-distance-moving-quotes/</loc></url>
+  <url><loc>https://routes.modelmoving.com/pennsylvania-long-distance-moving-quotes/</loc></url>
+  <url><loc>https://routes.modelmoving.com/connecticut-long-distance-moving-quotes/</loc></url>
+  <url><loc>https://routes.modelmoving.com/massachusetts-long-distance-moving-quotes/</loc></url>
+  <url><loc>https://routes.modelmoving.com/delaware-long-distance-moving-quotes/</loc></url>
+  <url><loc>https://routes.modelmoving.com/midwest-long-distance-moving-quotes/</loc></url>
+  <url><loc>https://routes.modelmoving.com/cleveland-long-distance-moving-quotes/</loc></url>
+  <url><loc>https://routes.modelmoving.com/detroit-long-distance-moving-quotes/</loc></url>
+  <url><loc>https://routes.modelmoving.com/new-jersey-long-distance-moving-quotes/</loc></url>
+  <url><loc>https://routes.modelmoving.com/hawaii-mainland-moving-quotes/</loc></url>
+  <url><loc>https://routes.modelmoving.com/alaska-mainland-moving-quotes/</loc></url>
 </urlset>
