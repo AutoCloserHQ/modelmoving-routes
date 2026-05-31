@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Northeast Long-Distance Moving Quotes | ModelMoving</title>
+  <meta name="description" content="Request long-distance moving quote options from New Jersey, New York, Pennsylvania, Connecticut, Massachusetts, Delaware and nearby Northeast areas to destinations across the continental U.S." />
+
+  <style>
+    :root {
+      --navy: #07182f;
+      --navy2: #0d2746;
+      --gold: #d7a84f;
+      --light: #f6f8fb;
+      --white: #ffffff;
+      --text: #1d2a3a;
+      --muted: #667085;
+      --border: #d9e1ec;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      background: var(--navy);
+      color: white;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-note {
+      font-size: 0.9rem;
+      color: #d8e3ef;
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(215,168,79,0.20), transparent 25%),
+        linear-gradient(135deg, var(--navy), var(--navy2));
+      color: white;
+      padding: 70px 6%;
+    }
+
+    .hero-grid {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 4.5rem);
+      line-height: 1.03;
+      margin: 0 0 20px;
+      letter-spacing: -2px;
+    }
+
+    .hero p {
+      font-size: 1.13rem;
+      color: #dbe7f4;
+      max-width: 640px;
+      margin-bottom: 26px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .badge {
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.08);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: #f2f6fb;
+    }
+
+    .form-card {
+      background: white;
+      color: var(--text);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+    }
+
+    .form-card h2 {
+      margin: 0 0 8px;
+      font-size: 1.65rem;
+      color: var(--navy);
+    }
+
+    .form-card .small {
+      color: var(--muted);
+      margin-bottom: 18px;
+      font-size: 0.95rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    button {
+      width: 100%;
+      background: var(--gold);
+      color: #151515;
+      border: none;
+      border-radius: 12px;
+      padding: 15px 18px;
+      font-size: 1rem;
+      font-weight: 800;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .secure {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-align: center;
+    }
+
+    section {
+      padding: 58px 6%;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-title h2 {
+      color: var(--navy);
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+      margin: 0 0 10px;
+      letter-spacing: -1px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      max-width: 740px;
+      margin: 0 auto;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(7,24,47,0.06);
+    }
+
+    .card h3 {
+      color: var(--navy);
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .step-num {
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      background: var(--gold);
+      color: #111;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .disclaimer {
+      background: #eef3f9;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 34px 6%;
+    }
+
+    .disclaimer p {
+      max-width: 980px;
+      margin: 0 auto;
+      color: #3d4b5c;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .footer {
+      background: var(--navy);
+      color: #dbe7f4;
+      padding: 28px 6%;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .cards,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .topbar {
+        display: block;
+        text-align: center;
+      }
+
+      .nav-note {
+        margin-top: 6px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 46px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="logo">Model<span>Moving</span></div>
+    <div class="nav-note">Long-Distance Moving Quote Requests</div>
+  </header>
+
+  <main class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Northeast Moving Quote Help</div>
+        <h1>Northeast Long-Distance Moving Quotes</h1>
+        <p>
+          Moving from New Jersey, New York, Pennsylvania, Connecticut, Massachusetts,
+          Delaware or nearby Northeast areas? ModelMoving helps you request moving
+          quote options and connect with available moving partners based on your route,
+          timing, and move details.
+        </p>
+
+        <div class="hero-badges">
+          <div class="badge">Free quote request</div>
+          <div class="badge">Northeast pickup areas</div>
+          <div class="badge">Continental U.S. destinations</div>
+          <div class="badge">Route-based matching</div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h2>Find My Moving Quotes</h2>
+        <div class="small">Tell us where you’re moving and we’ll help route your request.</div>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="6bc5385c-1b5b-4955-bb2e-fc6da8bc924d">
+          <input type="hidden" name="subject" value="New Northeast Long-Distance Quote Request">
+          <input type="hidden" name="source" value="ModelMoving Routes">
+          <input type="hidden" name="route_page" value="Northeast Long-Distance Moving Quotes">
+          <input type="hidden" name="service_area" value="Northeast">
+          <input type="hidden" name="lead_type" value="Long-Distance Moving Quote Request">
+
+          <div class="form-grid">
+            <input type="text" name="full_name" placeholder="Full Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+
+            <input class="full" type="email" name="email" placeholder="Email Address" required>
+
+            <input type="text" name="moving_from" placeholder="Moving From: City, State or ZIP" required>
+            <input type="text" name="moving_to" placeholder="Moving To: City, State or ZIP" required>
+
+            <input type="date" name="move_date">
+            <select name="home_size">
+              <option value="">Home Size</option>
+              <option>Studio</option>
+              <option>1 Bedroom</option>
+              <option>2 Bedroom</option>
+              <option>3 Bedroom</option>
+              <option>4 Bedroom</option>
+              <option>5+ Bedroom</option>
+              <option>Office / Commercial</option>
+            </select>
+
+            <textarea class="full" name="message" placeholder="Anything important? Stairs, storage, packing, tight access, preferred move window, etc."></textarea>
+          </div>
+
+          <button type="submit">Find My Moving Quotes</button>
+          <div class="secure">Your request is sent securely. No obligation.</div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>Popular Northeast Pickup Areas</h2>
+        <p>
+          ModelMoving helps with long-distance quote requests from key Northeast pickup areas
+          to destinations across the continental United States.
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>New Jersey Moving Quotes</h3>
+          <p>Request quote options for long-distance moves from North, Central, or South Jersey.</p>
+        </div>
+
+        <div class="card">
+          <h3>New York Moving Quotes</h3>
+          <p>Moving from NYC, Long Island, Westchester, or nearby areas? Start your quote request here.</p>
+        </div>
+
+        <div class="card">
+          <h3>Pennsylvania Moving Quotes</h3>
+          <p>Long-distance moving quote help from Philadelphia, suburbs, and nearby PA pickup zones.</p>
+        </div>
+
+        <div class="card">
+          <h3>Connecticut Moving Quotes</h3>
+          <p>Get connected with available moving options for CT long-distance relocations.</p>
+        </div>
+
+        <div class="card">
+          <h3>Massachusetts Moving Quotes</h3>
+          <p>Request moving quote options from Boston, surrounding suburbs, and nearby MA areas.</p>
+        </div>
+
+        <div class="card">
+          <h3>Delaware Moving Quotes</h3>
+          <p>Planning a long-distance move from Delaware? Submit your route and move details.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:white;">
+    <div class="container">
+      <div class="section-title">
+        <h2>How It Works</h2>
+        <p>A simple quote request process built for long-distance moves.</p>
+      </div>
+
+      <div class="steps">
+        <div class="card">
+          <div class="step-num">1</div>
+          <h3>Submit Your Route</h3>
+          <p>Tell us your pickup area, destination, move date, and home size.</p>
+        </div>
+
+        <div class="card">
+          <div class="step-num">2</div>
+          <h3>Review Your Details</h3>
+          <p>Your request is reviewed based on route, timing, and moving needs.</p>
+        </div>
+
+        <div class="card">
+          <div class="step-num">3</div>
+          <h3>Quote Options</h3>
+          <p>You may be connected with available moving partners that service your route.</p>
+        </div>
+
+        <div class="card">
+          <div class="step-num">4</div>
+          <h3>Plan the Move</h3>
+          <p>Compare options, ask questions, and choose what fits your move best.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>What Affects Your Moving Quote?</h2>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Distance & Route</h3>
+          <p>Your pickup and delivery locations affect timing, availability, and pricing.</p>
+        </div>
+
+        <div class="card">
+          <h3>Home Size & Inventory</h3>
+          <p>The amount of furniture, boxes, and special items can affect your quote.</p>
+        </div>
+
+        <div class="card">
+          <h3>Move Date</h3>
+          <p>Peak season, weekends, and short-notice moves may change availability.</p>
+        </div>
+
+        <div class="card">
+          <h3>Packing Help</h3>
+          <p>Packing, fragile items, and custom crating can change the service level needed.</p>
+        </div>
+
+        <div class="card">
+          <h3>Storage Needs</h3>
+          <p>Temporary storage or delayed delivery may affect the final quote options.</p>
+        </div>
+
+        <div class="card">
+          <h3>Building Access</h3>
+          <p>Stairs, elevators, long walks, parking, and shuttle needs can affect pricing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="disclaimer">
+    <p>
+      ModelMoving is a moving quote request and matching platform, not a motor carrier.
+      Your request may be matched with available moving partners that can review your route
+      and provide service details, availability, and pricing.
+    </p>
+  </div>
+
+  <footer class="footer">
+    © 2026 ModelMoving. Long-distance moving quote requests and route-based moving partner matching.
+  </footer>
+
+</body>
+</html>
