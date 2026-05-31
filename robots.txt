@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://routes.modelmoving.com/sitemap.xml
