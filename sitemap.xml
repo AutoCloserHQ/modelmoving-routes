@@ -3,7 +3,7 @@
 
   <url>
     <loc>https://routes.modelmoving.com/</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -197,7 +197,7 @@
     <priority>0.85</priority>
   </url>
 
-    <url>
+  <url>
     <loc>https://routes.modelmoving.com/ohio-to-florida-moving-quotes/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -232,7 +232,7 @@
     <priority>0.85</priority>
   </url>
 
-    <url>
+  <url>
     <loc>https://routes.modelmoving.com/california-to-hawaii-moving-quotes/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -263,6 +263,41 @@
   <url>
     <loc>https://routes.modelmoving.com/new-jersey-to-hawaii-moving-quotes/</loc>
     <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://routes.modelmoving.com/washington-to-alaska-moving-quotes/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://routes.modelmoving.com/california-to-alaska-moving-quotes/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://routes.modelmoving.com/texas-to-alaska-moving-quotes/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://routes.modelmoving.com/florida-to-alaska-moving-quotes/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://routes.modelmoving.com/new-york-to-alaska-moving-quotes/</loc>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
