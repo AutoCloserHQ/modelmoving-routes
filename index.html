@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>ModelMoving Long-Distance Moving Quote Routes</title>
-  <meta name="description" content="Explore route-based long-distance moving quote request pages for Northeast, Midwest, New Jersey, New York, Pennsylvania, Connecticut, Massachusetts, Delaware, Ohio, Michigan, Cleveland, Detroit, Akron, Columbus, Ann Arbor, Hawaii, Alaska, Puerto Rico and popular state-to-state relocation routes including NJ to FL, NJ to TX, NY to FL, NY to TX, PA to FL, CT to FL, MA to FL, MA to TX, NJ to NC, NY to NC, OH to FL, OH to TX, MI to FL, MI to TX, Columbus to FL, California to Hawaii, Texas to Hawaii, Florida to Hawaii, New York to Hawaii, New Jersey to Hawaii, Washington to Alaska, California to Alaska, Texas to Alaska, Florida to Alaska, New York to Alaska, Puerto Rico to Florida, New York to Puerto Rico, and New Jersey to Puerto Rico." />
+  <meta name="description" content="Explore route-based long-distance moving quote request pages for Northeast, Midwest, Carolinas growth routes, New Jersey, New York, Pennsylvania, Connecticut, Massachusetts, Delaware, Ohio, Michigan, Cincinnati, Dayton, Toledo, Cleveland, Detroit, Akron, Columbus, Ann Arbor, Grand Rapids, Lansing, Hawaii, Alaska, Puerto Rico and popular state-to-state relocation routes including NJ to FL, NJ to TX, NJ to SC, NY to SC, PA to NC, MA to NC, CT to NC, NY to FL, NY to TX, PA to FL, CT to FL, MA to FL, MA to TX, NJ to NC, NY to NC, OH to FL, OH to TX, MI to FL, MI to TX, Columbus to FL, California to Hawaii, Texas to Hawaii, Florida to Hawaii, New York to Hawaii, New Jersey to Hawaii, Washington to Alaska, California to Alaska, Texas to Alaska, Florida to Alaska, New York to Alaska, Puerto Rico to Florida, New York to Puerto Rico, and New Jersey to Puerto Rico." />
   <link rel="canonical" href="https://routes.modelmoving.com/" />
 
   <link rel="icon" href="https://routes.modelmoving.com/ModelMoving-Logo.png" type="image/png">
@@ -485,18 +485,46 @@
     }
 
     .card.puerto-rico-specialty::before {
-  content: "Puerto Rico Specialty Route";
-  display: inline-block;
-  background: var(--navy);
-  color: white;
-  border-radius: 999px;
-  padding: 7px 13px;
-  font-size: .72rem;
-  font-weight: 900;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-}
+      content: "Puerto Rico Specialty Route";
+      display: inline-block;
+      background: var(--navy);
+      color: white;
+      border-radius: 999px;
+      padding: 7px 13px;
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .card.carolinas-growth::before {
+      content: "Carolinas Growth Route";
+      display: inline-block;
+      background: var(--gold);
+      color: white;
+      border-radius: 999px;
+      padding: 7px 13px;
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .card.city-growth::before {
+      content: "City Growth Page";
+      display: inline-block;
+      background: var(--navy);
+      color: white;
+      border-radius: 999px;
+      padding: 7px 13px;
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
 
     .card.match {
       border-color: rgba(47,143,85,.65);
@@ -648,7 +676,7 @@
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "ModelMoving Long-Distance Moving Quote Routes",
-    "description": "Explore route-based long-distance moving quote request pages for Northeast, Midwest, New Jersey, New York, Pennsylvania, Connecticut, Massachusetts, Delaware, Ohio, Michigan, Cleveland, Detroit, Akron, Columbus, Ann Arbor, Hawaii, Alaska, and popular state-to-state relocation routes including Florida, Texas, North Carolina, Hawaii, and Alaska.",
+    "description": "Explore route-based long-distance moving quote request pages for Northeast, Midwest, Carolinas growth routes, Ohio, Michigan, pickup-city pages, Hawaii, Alaska, Puerto Rico, and popular state-to-state relocation routes including Florida, Texas, North Carolina, South Carolina, Hawaii, Alaska, and Puerto Rico.",
     "url": "https://routes.modelmoving.com/",
     "publisher": {
       "@type": "Organization",
@@ -692,8 +720,9 @@
         <p class="hero-copy">
           Explore route-based moving quote options for Northeast, Midwest, New Jersey,
           New York, Pennsylvania, Connecticut, Massachusetts, Delaware, Ohio, Michigan,
-          Cleveland, Detroit, Akron, Columbus, Ann Arbor, Hawaii, Alaska, Puerto Rico and popular
-          state-to-state relocation routes including Florida, Texas, North Carolina, Hawaii,
+          Cleveland, Detroit, Akron, Columbus, Cincinnati, Dayton, Toledo, Ann Arbor,
+          Grand Rapids, Lansing, Hawaii, Alaska, Puerto Rico and popular state-to-state
+          relocation routes including Florida, Texas, North Carolina, South Carolina, Hawaii,
           and Alaska. ModelMoving helps customers request organized moving quote options
           based on route, timing, home size, and move details.
         </p>
@@ -716,7 +745,8 @@
         <div class="checks">
           <div class="check"><span>✓</span> Northeast route pages</div>
           <div class="check"><span>✓</span> Midwest, Ohio, and Michigan route pages</div>
-          <div class="check"><span>✓</span> Florida, Texas, and North Carolina route pages</div>
+          <div class="check"><span>✓</span> Florida, Texas, North Carolina, and South Carolina route pages</div>
+          <div class="check"><span>✓</span> Ohio and Michigan pickup-city growth pages</div>
           <div class="check"><span>✓</span> Hawaii, Alaska, and Puerto Rico specialty pages</div>
         </div>
       </aside>
@@ -773,7 +803,7 @@
       <div class="route-finder">
         <label for="routeSearch">Find your route faster</label>
         <div class="route-search-wrap">
-          <input id="routeSearch" class="route-search" type="search" placeholder="Search by state, city, or route — example: Florida, Texas, New York, North Carolina..." autocomplete="off">
+          <input id="routeSearch" class="route-search" type="search" placeholder="Search by state, city, or route — example: Florida, Texas, New York, North Carolina, South Carolina, Cincinnati..." autocomplete="off">
           <button class="clear-search" type="button" id="clearRouteSearch">Clear</button>
         </div>
         <div class="route-count" id="routeCount">Showing all route pages.</div>
@@ -869,6 +899,24 @@
           <p><a href="/akron-long-distance-moving-quotes/" class="route-link">Open route →</a></p>
         </div>
 
+        <div class="card city-growth">
+          <h3><a href="/cincinnati-long-distance-moving-quotes/">Cincinnati Long-Distance Moving Quotes</a></h3>
+          <p>Cincinnati, Hamilton County, Mason, West Chester, Fairfield, Northern Kentucky, and nearby pickup areas.</p>
+          <p><a href="/cincinnati-long-distance-moving-quotes/" class="route-link">Open route →</a></p>
+        </div>
+
+        <div class="card city-growth">
+          <h3><a href="/dayton-long-distance-moving-quotes/">Dayton Long-Distance Moving Quotes</a></h3>
+          <p>Dayton, Kettering, Beavercreek, Huber Heights, Centerville, Fairborn, Springfield, and nearby Miami Valley areas.</p>
+          <p><a href="/dayton-long-distance-moving-quotes/" class="route-link">Open route →</a></p>
+        </div>
+
+        <div class="card city-growth">
+          <h3><a href="/toledo-long-distance-moving-quotes/">Toledo Long-Distance Moving Quotes</a></h3>
+          <p>Toledo, Sylvania, Perrysburg, Maumee, Oregon, Bowling Green, Holland, and nearby northwest Ohio areas.</p>
+          <p><a href="/toledo-long-distance-moving-quotes/" class="route-link">Open route →</a></p>
+        </div>
+
         <div class="card">
           <h3><a href="/michigan-long-distance-moving-quotes/">Michigan Long-Distance Moving Quotes</a></h3>
           <p>Statewide Michigan quote request help for Detroit, Ann Arbor, Grand Rapids, Lansing, Warren, Troy, Dearborn, and nearby areas.</p>
@@ -897,6 +945,18 @@
           <h3><a href="/ann-arbor-long-distance-moving-quotes/">Ann Arbor Long-Distance Moving Quotes</a></h3>
           <p>Ann Arbor, Ypsilanti, Saline, Dexter, Chelsea, Pittsfield Township, and nearby Southeast Michigan pickup areas.</p>
           <p><a href="/ann-arbor-long-distance-moving-quotes/" class="route-link">Open route →</a></p>
+        </div>
+
+        <div class="card city-growth">
+          <h3><a href="/grand-rapids-long-distance-moving-quotes/">Grand Rapids Long-Distance Moving Quotes</a></h3>
+          <p>Grand Rapids, Kentwood, Wyoming, Holland, Muskegon, Rockford, Ada, and nearby West Michigan areas.</p>
+          <p><a href="/grand-rapids-long-distance-moving-quotes/" class="route-link">Open route →</a></p>
+        </div>
+
+        <div class="card city-growth">
+          <h3><a href="/lansing-long-distance-moving-quotes/">Lansing Long-Distance Moving Quotes</a></h3>
+          <p>Lansing, East Lansing, Okemos, Haslett, Holt, DeWitt, Grand Ledge, and nearby mid-Michigan areas.</p>
+          <p><a href="/lansing-long-distance-moving-quotes/" class="route-link">Open route →</a></p>
         </div>
 
         <div class="card">
@@ -939,6 +999,36 @@
           <h3><a href="/new-york-to-north-carolina-moving-quotes/">New York to North Carolina Moving Quotes</a></h3>
           <p>Route-based quote request help for New York to North Carolina moves, including Charlotte, Raleigh, Durham, Greensboro, Wilmington, and nearby areas.</p>
           <p><a href="/new-york-to-north-carolina-moving-quotes/" class="route-link">Open route →</a></p>
+        </div>
+
+        <div class="card carolinas-growth">
+          <h3><a href="/new-jersey-to-south-carolina-moving-quotes/">New Jersey to South Carolina Moving Quotes</a></h3>
+          <p>Route-based quote request help for New Jersey to South Carolina moves, including Charleston, Columbia, Greenville, Myrtle Beach, Rock Hill, and nearby areas.</p>
+          <p><a href="/new-jersey-to-south-carolina-moving-quotes/" class="route-link">Open route →</a></p>
+        </div>
+
+        <div class="card carolinas-growth">
+          <h3><a href="/new-york-to-south-carolina-moving-quotes/">New York to South Carolina Moving Quotes</a></h3>
+          <p>Route-based quote request help for New York to South Carolina moves, including Charleston, Columbia, Greenville, Myrtle Beach, Rock Hill, and nearby areas.</p>
+          <p><a href="/new-york-to-south-carolina-moving-quotes/" class="route-link">Open route →</a></p>
+        </div>
+
+        <div class="card carolinas-growth">
+          <h3><a href="/pennsylvania-to-north-carolina-moving-quotes/">Pennsylvania to North Carolina Moving Quotes</a></h3>
+          <p>Route-based quote request help for Pennsylvania to North Carolina moves, including Charlotte, Raleigh, Durham, Greensboro, Asheville, Wilmington, and nearby areas.</p>
+          <p><a href="/pennsylvania-to-north-carolina-moving-quotes/" class="route-link">Open route →</a></p>
+        </div>
+
+        <div class="card carolinas-growth">
+          <h3><a href="/massachusetts-to-north-carolina-moving-quotes/">Massachusetts to North Carolina Moving Quotes</a></h3>
+          <p>Route-based quote request help for Massachusetts to North Carolina moves, including Charlotte, Raleigh, Durham, Greensboro, Asheville, Wilmington, and nearby areas.</p>
+          <p><a href="/massachusetts-to-north-carolina-moving-quotes/" class="route-link">Open route →</a></p>
+        </div>
+
+        <div class="card carolinas-growth">
+          <h3><a href="/connecticut-to-north-carolina-moving-quotes/">Connecticut to North Carolina Moving Quotes</a></h3>
+          <p>Route-based quote request help for Connecticut to North Carolina moves, including Charlotte, Raleigh, Durham, Greensboro, Asheville, Wilmington, and nearby areas.</p>
+          <p><a href="/connecticut-to-north-carolina-moving-quotes/" class="route-link">Open route →</a></p>
         </div>
 
         <div class="card featured">
@@ -1038,34 +1128,34 @@
         </div>
 
         <div class="card puerto-rico-specialty">
-  <h3><a href="/puerto-rico-mainland-moving-quotes/">Puerto Rico Mainland Moving Quotes</a></h3>
-  <p>Request moving quote options between Puerto Rico and the U.S. mainland, including Florida, New York, New Jersey, Texas, Georgia, and more.</p>
-  <p><a href="/puerto-rico-mainland-moving-quotes/" class="route-link">Open route →</a></p>
-</div>
+          <h3><a href="/puerto-rico-mainland-moving-quotes/">Puerto Rico Mainland Moving Quotes</a></h3>
+          <p>Request moving quote options between Puerto Rico and the U.S. mainland, including Florida, New York, New Jersey, Texas, Georgia, and more.</p>
+          <p><a href="/puerto-rico-mainland-moving-quotes/" class="route-link">Open route →</a></p>
+        </div>
 
-<div class="card puerto-rico-specialty">
-  <h3><a href="/florida-to-puerto-rico-moving-quotes/">Florida to Puerto Rico Moving Quotes</a></h3>
-  <p>Request moving quote options from Florida to Puerto Rico, including San Juan, Bayamón, Carolina, Ponce, Caguas, and more.</p>
-  <p><a href="/florida-to-puerto-rico-moving-quotes/" class="route-link">Open route →</a></p>
-</div>
+        <div class="card puerto-rico-specialty">
+          <h3><a href="/florida-to-puerto-rico-moving-quotes/">Florida to Puerto Rico Moving Quotes</a></h3>
+          <p>Request moving quote options from Florida to Puerto Rico, including San Juan, Bayamón, Carolina, Ponce, Caguas, and more.</p>
+          <p><a href="/florida-to-puerto-rico-moving-quotes/" class="route-link">Open route →</a></p>
+        </div>
 
-<div class="card puerto-rico-specialty">
-  <h3><a href="/puerto-rico-to-florida-moving-quotes/">Puerto Rico to Florida Moving Quotes</a></h3>
-  <p>Request moving quote options from Puerto Rico to Florida, including Orlando, Tampa, Miami, Jacksonville, Fort Lauderdale, and more.</p>
-  <p><a href="/puerto-rico-to-florida-moving-quotes/" class="route-link">Open route →</a></p>
-</div>
+        <div class="card puerto-rico-specialty">
+          <h3><a href="/puerto-rico-to-florida-moving-quotes/">Puerto Rico to Florida Moving Quotes</a></h3>
+          <p>Request moving quote options from Puerto Rico to Florida, including Orlando, Tampa, Miami, Jacksonville, Fort Lauderdale, and more.</p>
+          <p><a href="/puerto-rico-to-florida-moving-quotes/" class="route-link">Open route →</a></p>
+        </div>
 
-<div class="card puerto-rico-specialty">
-  <h3><a href="/new-york-to-puerto-rico-moving-quotes/">New York to Puerto Rico Moving Quotes</a></h3>
-  <p>Request moving quote options from New York to Puerto Rico, including San Juan, Bayamón, Carolina, Ponce, Caguas, and more.</p>
-  <p><a href="/new-york-to-puerto-rico-moving-quotes/" class="route-link">Open route →</a></p>
-</div>
+        <div class="card puerto-rico-specialty">
+          <h3><a href="/new-york-to-puerto-rico-moving-quotes/">New York to Puerto Rico Moving Quotes</a></h3>
+          <p>Request moving quote options from New York to Puerto Rico, including San Juan, Bayamón, Carolina, Ponce, Caguas, and more.</p>
+          <p><a href="/new-york-to-puerto-rico-moving-quotes/" class="route-link">Open route →</a></p>
+        </div>
 
-<div class="card puerto-rico-specialty">
-  <h3><a href="/new-jersey-to-puerto-rico-moving-quotes/">New Jersey to Puerto Rico Moving Quotes</a></h3>
-  <p>Request moving quote options from New Jersey to Puerto Rico, including San Juan, Bayamón, Carolina, Ponce, Caguas, and more.</p>
-  <p><a href="/new-jersey-to-puerto-rico-moving-quotes/" class="route-link">Open route →</a></p>
-</div>
+        <div class="card puerto-rico-specialty">
+          <h3><a href="/new-jersey-to-puerto-rico-moving-quotes/">New Jersey to Puerto Rico Moving Quotes</a></h3>
+          <p>Request moving quote options from New Jersey to Puerto Rico, including San Juan, Bayamón, Carolina, Ponce, Caguas, and more.</p>
+          <p><a href="/new-jersey-to-puerto-rico-moving-quotes/" class="route-link">Open route →</a></p>
+        </div>
 
       </div>
     </div>
