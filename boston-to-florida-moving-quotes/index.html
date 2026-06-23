@@ -5,537 +5,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Boston to Florida Moving Quotes | ModelMoving</title>
-  <meta name="description" content="Request Boston to Florida moving quote options for moves from Boston, Cambridge, Brookline, Newton, Quincy, Somerville, Medford, Malden, Waltham, South Shore, North Shore, MetroWest, and nearby Massachusetts areas to Miami, Fort Lauderdale, Boca Raton, West Palm Beach, Naples, Fort Myers, Tampa, Orlando, Jacksonville, Sarasota, and nearby Florida destinations." />
+  <meta name="description" content="Request Boston to Florida moving quote options for long-distance moves from Boston, Cambridge, Brookline, Somerville, and nearby Massachusetts areas to Miami, Orlando, Tampa, Naples, Jacksonville, and more." />
   <link rel="canonical" href="https://routes.modelmoving.com/boston-to-florida-moving-quotes/" />
 
   <link rel="icon" href="https://routes.modelmoving.com/ModelMoving-Logo.png" type="image/png">
   <link rel="apple-touch-icon" href="https://routes.modelmoving.com/ModelMoving-Logo.png">
+  <meta property="og:title" content="Boston to Florida Moving Quotes | ModelMoving">
+  <meta property="og:description" content="Request Boston to Florida moving quote options for long-distance moves from Boston, Cambridge, Brookline, Somerville, and nearby Massachusetts areas to Miami, Orlando, Tampa, Naples, Jacksonville, and more.">
   <meta property="og:image" content="https://routes.modelmoving.com/ModelMoving-Logo.png">
   <meta name="twitter:image" content="https://routes.modelmoving.com/ModelMoving-Logo.png">
 
   <style>
+
     :root {
       --navy: #102b4a;
       --navy-dark: #07182f;
+      --navy-ink: #0b1f39;
       --gold: #c79a3b;
+      --gold-light: #f1dca5;
       --cream: #f7f4ee;
       --soft: #f8fafc;
+      --white: #ffffff;
       --text: #16283d;
       --muted: #65758b;
       --border: #dfe6ef;
       --green: #2f8f55;
+      --shadow: 0 22px 70px rgba(16,43,74,.12);
     }
-
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; font-family: Inter, Arial, Helvetica, sans-serif; color:var(--text); background:var(--cream); line-height:1.65; }
+    a { text-decoration:none; color:inherit; }
+    .nav { background:rgba(255,255,255,.96); border-bottom:1px solid rgba(16,43,74,.08); padding:18px 5%; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:20; backdrop-filter:blur(10px); }
+    .brand { display:flex; align-items:center; gap:14px; }
+    .mark { width:54px; height:54px; border:2px solid var(--gold); border-radius:999px; display:grid; place-items:center; overflow:hidden; background:var(--navy-dark); box-shadow:0 8px 22px rgba(16,43,74,.16); flex:0 0 54px; }
+    .mark img { width:100%; height:100%; object-fit:cover; display:block; }
+    .brand-title { font-family:Georgia,'Times New Roman',serif; font-size:1.8rem; font-weight:700; color:var(--navy); line-height:1; }
+    .brand-sub { font-size:.72rem; letter-spacing:3px; text-transform:uppercase; color:var(--gold); font-weight:800; margin-top:4px; }
+    .nav-links { display:flex; gap:28px; align-items:center; font-weight:800; color:var(--text); font-size:.95rem; }
+    .nav-cta { background:var(--navy); color:white; padding:13px 22px; border-radius:10px; }
+    .hero { min-height:760px; display:grid; align-items:center; padding:70px 5%; background: radial-gradient(circle at 86% 16%, rgba(199,154,59,.22), transparent 28%), linear-gradient(90deg, rgba(247,244,238,.98) 0%, rgba(247,244,238,.88) 44%, rgba(247,244,238,.48) 100%), url('https://images.unsplash.com/photo-1522083165195-3424ed129620?auto=format&fit=crop&w=1800&q=80'); background-size:cover; background-position:center; }
+    .hero-grid { max-width:1220px; width:100%; margin:0 auto; display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center; }
+    .eyebrow { color:var(--gold); text-transform:uppercase; letter-spacing:4px; font-weight:900; font-size:.78rem; margin-bottom:18px; }
+    h1 { font-family:Georgia,'Times New Roman',serif; font-size:clamp(3rem,6vw,5.9rem); line-height:.97; letter-spacing:-3px; color:var(--navy); margin:0 0 28px; max-width:820px; }
+    .hero-copy { font-size:1.22rem; color:#30425a; max-width:740px; margin-bottom:22px; }
+    .mini-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; max-width:720px; margin:22px 0 26px; }
+    .mini-stat { background:rgba(255,255,255,.75); border:1px solid rgba(16,43,74,.08); border-radius:16px; padding:14px; box-shadow:0 10px 24px rgba(16,43,74,.06); }
+    .mini-stat strong { display:block; color:var(--navy); font-size:1.2rem; line-height:1; }
+    .mini-stat span { color:var(--muted); font-size:.83rem; font-weight:800; }
+    .checks { display:grid; gap:10px; margin:24px 0 34px; font-weight:800; color:#263a52; }
+    .check { display:flex; gap:12px; align-items:flex-start; }
+    .check span { background:#e8f3ea; color:var(--green); width:24px; height:24px; border-radius:999px; display:inline-grid; place-items:center; flex:0 0 24px; font-size:.85rem; }
+    .hero-buttons { display:flex; gap:14px; flex-wrap:wrap; }
+    .btn { border-radius:12px; padding:15px 24px; font-weight:900; display:inline-flex; gap:8px; align-items:center; justify-content:center; }
+    .btn-primary { background:var(--navy); color:white; box-shadow:0 16px 34px rgba(16,43,74,.18); }
+    .btn-secondary { background:white; color:var(--navy); border:1px solid var(--border); }
+    .form-card { background:rgba(255,255,255,.97); border:1px solid rgba(16,43,74,.09); border-radius:24px; padding:30px; box-shadow:0 30px 80px rgba(16,43,74,.20); }
+    .form-card h2 { font-family:Georgia,'Times New Roman',serif; text-align:center; color:var(--navy); font-size:2rem; line-height:1.1; margin:0 0 6px; }
+    .form-card p { text-align:center; margin:0 0 22px; color:var(--muted); font-weight:700; }
+    .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:13px; }
+    label { display:block; font-weight:900; color:var(--text); font-size:.84rem; margin-bottom:6px; }
+    input, select, textarea { width:100%; border:1px solid var(--border); border-radius:10px; padding:14px; font-size:.96rem; font-family:inherit; outline:none; background:white; color:var(--text); }
+    input:focus, select:focus, textarea:focus { border-color:var(--gold); box-shadow:0 0 0 3px rgba(199,154,59,.14); }
+    textarea { min-height:82px; resize:vertical; }
+    .full { grid-column:1 / -1; }
+    button { width:100%; background:var(--navy); color:white; border:none; border-radius:10px; padding:16px 18px; margin-top:14px; font-size:1.05rem; font-weight:900; cursor:pointer; }
+    .secure { text-align:center; color:var(--muted); font-size:.82rem; margin-top:12px; }
+    .trust-strip { background:white; border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:22px 5%; }
+    .trust-grid { max-width:1220px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    .trust-item { display:flex; gap:14px; align-items:flex-start; border-right:1px solid var(--border); padding-right:16px; }
+    .trust-item:last-child { border-right:0; }
+    .icon { width:44px; height:44px; border-radius:999px; background:#edf7f0; color:var(--green); display:grid; place-items:center; flex:0 0 44px; font-weight:900; }
+    .trust-item h3 { margin:0; color:var(--navy); text-transform:uppercase; letter-spacing:1px; font-size:.86rem; }
+    .trust-item p { margin:4px 0 0; color:var(--muted); font-size:.92rem; }
+    section { padding:76px 5%; }
+    .container { max-width:1220px; margin:0 auto; }
+    .center { text-align:center; max-width:880px; margin:0 auto 38px; }
+    .pill { display:inline-block; padding:8px 18px; border:1px solid #cfe0ef; background:#edf5fb; color:var(--navy); border-radius:999px; text-transform:uppercase; letter-spacing:3px; font-size:.72rem; font-weight:900; margin-bottom:18px; }
+    h2 { font-family:Georgia,'Times New Roman',serif; font-size:clamp(2.3rem,4vw,4rem); line-height:1.05; color:var(--navy); letter-spacing:-2px; margin:0 0 18px; }
+    .center p { color:#52657c; font-size:1.12rem; margin:0; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .card { background:white; border:1px solid var(--border); border-radius:18px; padding:28px; box-shadow:0 16px 45px rgba(16,43,74,.05); }
+    .card h3 { color:var(--navy); font-family:Georgia,'Times New Roman',serif; font-size:1.45rem; line-height:1.15; margin:0 0 10px; }
+    .card p, .card li { color:var(--muted); margin:0; }
+    .card ul { margin:0; padding-left:18px; }
+    .highlight { background:linear-gradient(135deg, var(--navy), var(--navy-ink)); color:white; }
+    .highlight h3, .highlight p, .highlight li { color:white; }
+    .cost-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+    .cost-card { background:white; border:1px solid var(--border); border-radius:18px; padding:30px; }
+    .cost-card h3 { font-family:Georgia,'Times New Roman',serif; font-size:1.7rem; color:var(--navy); margin:0 0 6px; }
+    .price { font-size:2rem; font-weight:900; color:var(--navy); margin:6px 0 10px; }
+    .note-box { margin-top:22px; background:white; border:1px solid var(--border); border-radius:18px; padding:24px; color:#3b4c61; font-weight:700; display:flex; gap:14px; align-items:flex-start; }
+    .split { display:grid; grid-template-columns:.9fr 1.1fr; gap:28px; align-items:start; }
+    .steps { counter-reset:step; display:grid; gap:14px; }
+    .step { background:white; border:1px solid var(--border); border-radius:16px; padding:20px; display:flex; gap:14px; align-items:flex-start; }
+    .step:before { counter-increment:step; content:counter(step); width:36px; height:36px; border-radius:999px; background:var(--gold); color:white; display:grid; place-items:center; flex:0 0 36px; font-weight:900; }
+    .step h3 { margin:0 0 4px; color:var(--navy); font-size:1.05rem; }
+    .step p { margin:0; color:var(--muted); }
+    .route-links { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+    .route-link { background:white; border:1px solid var(--border); border-radius:14px; padding:16px; font-weight:900; color:var(--navy); box-shadow:0 10px 28px rgba(16,43,74,.04); }
+    .route-link:hover { border-color:var(--gold); transform:translateY(-1px); }
+    .faq { display:grid; gap:12px; }
+    .faq-item { background:white; border:1px solid var(--border); border-radius:14px; padding:20px 22px; }
+    .faq-item h3 { margin:0 0 6px; color:var(--navy); font-size:1.05rem; }
+    .faq-item p { margin:0; color:var(--muted); }
+    .cta { background:linear-gradient(135deg,var(--navy),var(--navy-ink)); color:white; border-radius:24px; padding:42px; display:flex; align-items:center; justify-content:space-between; gap:24px; box-shadow:var(--shadow); }
+    .cta h2 { color:white; font-size:clamp(2rem,3vw,3rem); margin-bottom:8px; }
+    .cta p { color:#d8e4f0; margin:0; }
+    .cta .btn { background:white; color:var(--navy); min-width:220px; }
+    .disclaimer { background:#eef3f8; border-top:1px solid var(--border); padding:30px 5%; color:#42546b; font-size:.93rem; text-align:center; }
+    .footer { background:var(--navy-dark); color:#dce8f4; padding:30px 5%; text-align:center; font-size:.9rem; }
+    @media (max-width:980px) { .hero-grid,.trust-grid,.cards,.cost-grid,.split,.route-links,.mini-stats { grid-template-columns:1fr; } .nav-links{display:none;} .hero{padding-top:48px;} .trust-item{border-right:0;border-bottom:1px solid var(--border);padding-bottom:14px;} .trust-item:last-child{border-bottom:0;} .cta{display:block;text-align:center;} .cta .btn{margin-top:22px;} }
+    @media (max-width:560px) { .form-grid{grid-template-columns:1fr;} h1{font-size:3.1rem;} .hero{min-height:auto;} .brand-title{font-size:1.45rem;} .mark{width:44px;height:44px;flex-basis:44px;} }
 
-    body {
-      margin: 0;
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: var(--cream);
-      line-height: 1.65;
-    }
-
-    a { text-decoration: none; color: inherit; }
-
-    .nav {
-      background: rgba(255,255,255,.96);
-      border-bottom: 1px solid rgba(16,43,74,.08);
-      padding: 18px 5%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(10px);
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .mark {
-      width: 54px;
-      height: 54px;
-      border: 2px solid var(--gold);
-      border-radius: 999px;
-      display: grid;
-      place-items: center;
-      overflow: hidden;
-      background: var(--navy-dark);
-      box-shadow: 0 8px 22px rgba(16,43,74,.16);
-      flex: 0 0 54px;
-    }
-
-    .mark img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .brand-title {
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--navy);
-      line-height: 1;
-    }
-
-    .brand-sub {
-      font-size: .72rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold);
-      font-weight: 800;
-      margin-top: 4px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 28px;
-      align-items: center;
-      font-weight: 800;
-      color: var(--text);
-      font-size: .95rem;
-    }
-
-    .nav-cta {
-      background: var(--navy);
-      color: white;
-      padding: 13px 22px;
-      border-radius: 10px;
-    }
-
-    .hero {
-      min-height: 720px;
-      display: grid;
-      align-items: center;
-      padding: 70px 5%;
-      background:
-        linear-gradient(90deg, rgba(247,244,238,.98) 0%, rgba(247,244,238,.90) 42%, rgba(247,244,238,.48) 100%),
-        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80');
-      background-size: cover;
-      background-position: center right;
-    }
-
-    .hero-grid {
-      max-width: 1220px;
-      width: 100%;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 56px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      font-weight: 900;
-      font-size: .78rem;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: clamp(3rem, 6vw, 5.9rem);
-      line-height: .97;
-      letter-spacing: -3px;
-      color: var(--navy);
-      margin: 0 0 28px;
-      max-width: 900px;
-    }
-
-    .hero-copy {
-      font-size: 1.22rem;
-      color: #30425a;
-      max-width: 720px;
-      margin-bottom: 26px;
-    }
-
-    .checks {
-      display: grid;
-      gap: 10px;
-      margin: 24px 0 34px;
-      font-weight: 800;
-      color: #263a52;
-    }
-
-    .check {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-    }
-
-    .check span {
-      background: #e8f3ea;
-      color: var(--green);
-      width: 24px;
-      height: 24px;
-      border-radius: 999px;
-      display: inline-grid;
-      place-items: center;
-      flex: 0 0 24px;
-      font-size: .85rem;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      border-radius: 12px;
-      padding: 15px 24px;
-      font-weight: 900;
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .btn-primary { background: var(--navy); color: white; }
-    .btn-secondary { background: white; color: var(--navy); border: 1px solid var(--border); }
-
-    .form-card {
-      background: rgba(255,255,255,.97);
-      border: 1px solid rgba(16,43,74,.09);
-      border-radius: 24px;
-      padding: 30px;
-      box-shadow: 0 30px 80px rgba(16,43,74,.20);
-    }
-
-    .form-card h2 {
-      font-family: Georgia, 'Times New Roman', serif;
-      text-align: center;
-      color: var(--navy);
-      font-size: 2rem;
-      line-height: 1.1;
-      margin: 0 0 6px;
-    }
-
-    .form-card p {
-      text-align: center;
-      margin: 0 0 22px;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 13px;
-    }
-
-    label {
-      display: block;
-      font-weight: 900;
-      color: var(--text);
-      font-size: .84rem;
-      margin-bottom: 6px;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 14px 14px;
-      font-size: .96rem;
-      font-family: inherit;
-      outline: none;
-      background: white;
-      color: var(--text);
-    }
-
-    textarea {
-      min-height: 82px;
-      resize: vertical;
-    }
-
-    .full { grid-column: 1 / -1; }
-
-    button {
-      width: 100%;
-      background: var(--navy);
-      color: white;
-      border: none;
-      border-radius: 10px;
-      padding: 16px 18px;
-      margin-top: 14px;
-      font-size: 1.05rem;
-      font-weight: 900;
-      cursor: pointer;
-    }
-
-    .secure {
-      text-align: center;
-      color: var(--muted);
-      font-size: .82rem;
-      margin-top: 12px;
-    }
-
-    .trust-strip {
-      background: white;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 22px 5%;
-    }
-
-    .trust-grid {
-      max-width: 1220px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 16px;
-    }
-
-    .trust-item {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-      border-right: 1px solid var(--border);
-      padding-right: 16px;
-    }
-
-    .trust-item:last-child { border-right: 0; }
-
-    .icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 999px;
-      background: #edf7f0;
-      color: var(--green);
-      display: grid;
-      place-items: center;
-      flex: 0 0 44px;
-      font-weight: 900;
-    }
-
-    .trust-item h3 {
-      margin: 0;
-      color: var(--navy);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: .86rem;
-    }
-
-    .trust-item p {
-      margin: 4px 0 0;
-      color: var(--muted);
-      font-size: .92rem;
-    }
-
-    section { padding: 76px 5%; }
-
-    .container {
-      max-width: 1220px;
-      margin: 0 auto;
-    }
-
-    .center {
-      text-align: center;
-      max-width: 880px;
-      margin: 0 auto 38px;
-    }
-
-    .pill {
-      display: inline-block;
-      padding: 8px 18px;
-      border: 1px solid #cfe0ef;
-      background: #edf5fb;
-      color: var(--navy);
-      border-radius: 999px;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: .72rem;
-      font-weight: 900;
-      margin-bottom: 18px;
-    }
-
-    h2 {
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: clamp(2.3rem, 4vw, 4rem);
-      line-height: 1.05;
-      color: var(--navy);
-      letter-spacing: -2px;
-      margin: 0 0 18px;
-    }
-
-    .center p {
-      color: #52657c;
-      font-size: 1.12rem;
-      margin: 0;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 28px;
-      box-shadow: 0 16px 45px rgba(16,43,74,.05);
-    }
-
-    .card h3 {
-      color: var(--navy);
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: 1.45rem;
-      line-height: 1.15;
-      margin: 0 0 10px;
-    }
-
-    .card p {
-      color: var(--muted);
-      margin: 0;
-    }
-
-    .cost-grid {
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      gap: 22px;
-    }
-
-    .cost-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 30px;
-    }
-
-    .cost-card h3 {
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: 1.7rem;
-      color: var(--navy);
-      margin: 0 0 6px;
-    }
-
-    .price {
-      font-size: 2rem;
-      font-weight: 900;
-      color: var(--navy);
-      margin: 6px 0 10px;
-    }
-
-    .note-box {
-      margin-top: 22px;
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 24px;
-      color: #3b4c61;
-      font-weight: 700;
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap: 28px;
-      align-items: start;
-    }
-
-    .faq {
-      display: grid;
-      gap: 12px;
-    }
-
-    .faq-item {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px 22px;
-    }
-
-    .faq-item h3 {
-      margin: 0 0 6px;
-      color: var(--navy);
-      font-size: 1.05rem;
-    }
-
-    .faq-item p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .cta {
-      background: var(--navy);
-      color: white;
-      border-radius: 24px;
-      padding: 42px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .cta h2 {
-      color: white;
-      font-size: clamp(2rem, 3vw, 3rem);
-      margin-bottom: 8px;
-    }
-
-    .cta p { color: #d8e4f0; margin: 0; }
-
-    .cta .btn {
-      background: white;
-      color: var(--navy);
-      min-width: 220px;
-    }
-
-    .disclaimer {
-      background: #eef3f8;
-      border-top: 1px solid var(--border);
-      padding: 30px 5%;
-      color: #42546b;
-      font-size: .93rem;
-      text-align: center;
-    }
-
-    .footer {
-      background: var(--navy-dark);
-      color: #dce8f4;
-      padding: 30px 5%;
-      text-align: center;
-      font-size: .9rem;
-    }
-
-    @media (max-width: 980px) {
-      .hero-grid,
-      .trust-grid,
-      .cards,
-      .cost-grid,
-      .split {
-        grid-template-columns: 1fr;
-      }
-
-      .nav-links { display: none; }
-      .hero { padding-top: 48px; }
-      .trust-item { border-right: 0; border-bottom: 1px solid var(--border); padding-bottom: 14px; }
-      .trust-item:last-child { border-bottom: 0; }
-      .cta { display: block; text-align: center; }
-      .cta .btn { margin-top: 22px; }
-    }
-
-    @media (max-width: 560px) {
-      .form-grid { grid-template-columns: 1fr; }
-      h1 { font-size: 3.1rem; }
-      .hero { min-height: auto; }
-      .brand-title { font-size: 1.45rem; }
-      .mark { width: 44px; height: 44px; flex-basis: 44px; }
-    }
   </style>
 
   <script type="application/ld+json">
@@ -543,7 +125,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Boston to Florida Moving Quotes",
-    "description": "Request Boston to Florida moving quote options for moves from Boston, Cambridge, Brookline, Newton, Quincy, Somerville, Medford, Malden, Waltham, South Shore, North Shore, MetroWest, and nearby Massachusetts areas to Miami, Fort Lauderdale, Boca Raton, West Palm Beach, Naples, Fort Myers, Tampa, Orlando, Jacksonville, Sarasota, and nearby Florida destinations.",
+    "description": "Request Boston to Florida moving quote options for long-distance moves from Boston, Cambridge, Brookline, Somerville, and nearby Massachusetts areas to Miami, Orlando, Tampa, Naples, Jacksonville, and more.",
     "url": "https://routes.modelmoving.com/boston-to-florida-moving-quotes/",
     "publisher": {
       "@type": "Organization",
@@ -556,26 +138,72 @@
     }
   }
   </script>
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is ModelMoving a Boston to Florida moving company?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ModelMoving is a moving quote request and matching platform. We help organize your request and may connect you with selected moving partners based on route, timing, size, and availability."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I request a quote for Boston to Florida?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can submit your pickup, delivery, move date, home size, and access details for a Boston to Florida moving quote request."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What information helps the quote request?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pickup city/ZIP, delivery city/ZIP, move date, home size, inventory, packing needs, storage, stairs, elevators, parking access, and special items all help."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I submit if I only have an estimated move date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If your date is not exact yet, add your best estimated move window in the notes so the request can still be reviewed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can packing or storage be included?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can mention packing, fragile items, storage, or special handling in your notes. Availability and pricing depend on route, timing, and provider options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the quote request free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Submitting a request through ModelMoving is free and there is no obligation."
+      }
+    }
+  ]
+}
+  </script>
 </head>
-
 <body>
-
   <header class="nav">
     <a href="https://modelmoving.com" class="brand">
-      <div class="mark">
-        <img src="https://routes.modelmoving.com/ModelMoving-Logo.png" alt="ModelMoving logo">
-      </div>
-      <div>
-        <div class="brand-title">Model Moving</div>
-        <div class="brand-sub">Long-Distance Quote Help</div>
-      </div>
+      <div class="mark"><img src="https://routes.modelmoving.com/ModelMoving-Logo.png" alt="ModelMoving logo"></div>
+      <div><div class="brand-title">Model Moving</div><div class="brand-sub">Long-Distance Quote Help</div></div>
     </a>
-
     <nav class="nav-links">
-      <a href="#cost">Cost Guide</a>
-      <a href="#routes">Routes</a>
-      <a href="#faq">FAQ</a>
-      <a href="#quote" class="nav-cta">Get Quote</a>
+      <a href="#how">How It Works</a><a href="#cost">Cost Guide</a><a href="#routes">Routes</a><a href="#faq">FAQ</a><a href="#quote" class="nav-cta">Get Quote</a>
     </nav>
   </header>
 
@@ -584,324 +212,56 @@
       <div>
         <div class="eyebrow">Boston to Florida moving quote help</div>
         <h1>Boston to Florida Moving Quotes</h1>
-
-        <p class="hero-copy">
-          Planning a move from Boston to Florida? ModelMoving helps customers
-          request organized moving quote options based on pickup city, Florida destination,
-          move date, home size, access details, packing needs, shipment timing, and route availability.
-        </p>
-
-        <div class="checks">
-          <div class="check"><span>✓</span> Quote requests for Boston to Florida long-distance moves</div>
-          <div class="check"><span>✓</span> Helpful for South Florida, Central Florida, Gulf Coast, Northeast Florida, and statewide Florida destinations</div>
-          <div class="check"><span>✓</span> Free, no-obligation Boston to Florida moving quote request</div>
-        </div>
-
-        <div class="hero-buttons">
-          <a href="#quote" class="btn btn-primary">Find My Boston to Florida Quotes →</a>
-          <a href="#cost" class="btn btn-secondary">View Cost Guide →</a>
-        </div>
+        <p class="hero-copy">Planning a move from Boston or Greater Boston to Florida? ModelMoving helps organize Boston to Florida moving quote requests around pickup access, destination city, move date, shipment size, building rules, and timing so your route can be reviewed more clearly.</p>
+        <div class="mini-stats"><div class="mini-stat"><strong>MA</strong><span>Pickup focus</span></div><div class="mini-stat"><strong>FL</strong><span>Destination focus</span></div><div class="mini-stat"><strong>No Obligation</strong><span>Quote request</span></div></div>
+        <div class="checks"><div class="check"><span>✓</span> Route-based quote request for Boston to Florida moves</div><div class="check"><span>✓</span> Pickup, delivery, access, timing, storage, and inventory details organized clearly</div><div class="check"><span>✓</span> Free, no-obligation moving quote request through ModelMoving</div></div>
+        <div class="hero-buttons"><a href="#quote" class="btn btn-primary">Find My Boston to FL Moving Quotes →</a><a href="#how" class="btn btn-secondary">How It Works →</a></div>
       </div>
 
       <aside class="form-card" id="quote">
         <h2>Get Your Free Quote Request</h2>
         <p>Tell us your Boston to Florida route.</p>
-
         <form action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="6bc5385c-1b5b-4955-bb2e-fc6da8bc924d">
-          <input type="hidden" name="subject" value="New Boston to Florida Moving Quote Request">
+          <input type="hidden" name="subject" value="New Boston to Florida Moving Quotes Request">
           <input type="hidden" name="source" value="ModelMoving Routes">
           <input type="hidden" name="route_page" value="Boston to Florida Moving Quotes">
           <input type="hidden" name="service_area" value="Boston to Florida">
-          <input type="hidden" name="lead_type" value="Boston to Florida Moving Quote Request">
-
+          <input type="hidden" name="lead_type" value="Boston to Florida Moving Quotes Request">
           <div class="form-grid">
-            <div>
-              <label>Pickup ZIP / City</label>
-              <input type="text" name="pickup_zip" placeholder="Boston, Cambridge, Quincy, Newton, etc." required>
-            </div>
-
-            <div>
-              <label>Florida Delivery ZIP / City</label>
-              <input type="text" name="delivery_zip" placeholder="Miami, Tampa, Orlando, etc." required>
-            </div>
-
-            <div>
-              <label>Move Date</label>
-              <input type="date" name="move_date">
-            </div>
-
-            <div>
-              <label>Home Size</label>
-              <select name="home_size">
-                <option value="">Select Size</option>
-                <option>Studio</option>
-                <option>1 Bedroom</option>
-                <option>2 Bedroom</option>
-                <option>3 Bedroom</option>
-                <option>4 Bedroom</option>
-                <option>5+ Bedroom</option>
-                <option>Storage Unit</option>
-                <option>Office / Commercial</option>
-              </select>
-            </div>
-
-            <div>
-              <label>Full Name</label>
-              <input type="text" name="full_name" placeholder="Your Name" required>
-            </div>
-
-            <div>
-              <label>Phone Number</label>
-              <input type="tel" name="phone" placeholder="Phone Number" required>
-            </div>
-
-            <div class="full">
-              <label>Email</label>
-              <input type="email" name="email" placeholder="Email Address" required>
-            </div>
-
-            <div class="full">
-              <label>Move Notes</label>
-              <textarea name="message" placeholder="Boston pickup city, Florida destination, stairs/elevator, parking, packing, storage, timing, access details, special items, or anything else helpful."></textarea>
-            </div>
+            <div><label>Pickup ZIP / City</label><input type="text" name="pickup_zip" placeholder="Pickup city or ZIP" required></div>
+            <div><label>Delivery ZIP / City</label><input type="text" name="delivery_zip" placeholder="Delivery city or ZIP" required></div>
+            <div><label>Move Date</label><input type="date" name="move_date"></div>
+            <div><label>Home Size</label><select name="home_size"><option value="">Select Size</option><option>Studio</option><option>1 Bedroom</option><option>2 Bedroom</option><option>3 Bedroom</option><option>4 Bedroom</option><option>5+ Bedroom</option><option>Storage Unit</option><option>Office / Commercial</option></select></div>
+            <div><label>Full Name</label><input type="text" name="full_name" placeholder="Your Name" required></div>
+            <div><label>Phone Number</label><input type="tel" name="phone" placeholder="Phone Number" required></div>
+            <div class="full"><label>Email</label><input type="email" name="email" placeholder="Email Address" required></div>
+            <div class="full"><label>Move Notes</label><textarea name="message" placeholder="Pickup area, delivery area, stairs/elevator, packing needs, storage, special items, preferred timing, etc."></textarea></div>
           </div>
-
-          <button type="submit">Find My Boston to Florida Quotes →</button>
+          <button type="submit">Find My Boston to FL Moving Quotes →</button>
           <div class="secure">🔒 Your information is secure. No obligation. By submitting this form, you agree that ModelMoving and selected moving partners may contact you about your moving quote request by phone, text, or email. Message/data rates may apply. Consent is not required to purchase services.</div>
         </form>
       </aside>
     </div>
   </main>
 
-  <div class="trust-strip">
-    <div class="trust-grid">
-      <div class="trust-item">
-        <div class="icon">✓</div>
-        <div>
-          <h3>Route-Based Help</h3>
-          <p>Quote requests are organized around Boston pickup, Florida destination, timing, and move details.</p>
-        </div>
-      </div>
+  <div class="trust-strip"><div class="trust-grid"><div class="trust-item"><div class="icon">✓</div><div><h3>Route-Based Help</h3><p>Requests are organized around route, size, timing, and access details.</p></div></div><div class="trust-item"><div class="icon">↗</div><div><h3>Long-Distance Routes</h3><p>Helpful for interstate and specialty moving quote requests.</p></div></div><div class="trust-item"><div class="icon">⌂</div><div><h3>Homes & Apartments</h3><p>Useful for houses, condos, apartments, storage units, and more.</p></div></div><div class="trust-item"><div class="icon">✉</div><div><h3>Simple Online Request</h3><p>Submit your route online and get moving quote help without pressure.</p></div></div></div></div>
 
-      <div class="trust-item">
-        <div class="icon">↗</div>
-        <div>
-          <h3>Florida Routes</h3>
-          <p>Helpful for moves from Boston to Miami, Fort Lauderdale, Tampa, Orlando, Jacksonville, Naples, and more.</p>
-        </div>
-      </div>
+  <section id="how"><div class="container split"><div><div class="pill">How ModelMoving Works</div><h2>Simple route-based quote help without pressure.</h2><p style="color:var(--muted);font-size:1.08rem;">ModelMoving helps organize the information a moving provider needs to review your request more clearly. The more accurate the route, access, size, and timing details are, the easier it is to see what options may fit.</p></div><div class="steps"><div class="step"><div><h3>Submit your route details</h3><p>Enter pickup city, delivery city, move date, home size, and contact details.</p></div></div><div class="step"><div><h3>Add access and inventory notes</h3><p>Mention stairs, elevators, parking, storage, packing, special items, or timing flexibility.</p></div></div><div class="step"><div><h3>Your request is reviewed</h3><p>The request may be matched with available moving options based on route, timing, size, and availability.</p></div></div><div class="step"><div><h3>No obligation</h3><p>Submitting a request is free and does not require you to book moving services.</p></div></div></div></div></section>
 
-      <div class="trust-item">
-        <div class="icon">⌂</div>
-        <div>
-          <h3>Homes & Apartments</h3>
-          <p>Request help for houses, condos, apartments, townhomes, storage units, offices, and more.</p>
-        </div>
-      </div>
+  <section id="routes" style="background:var(--soft);"><div class="container"><div class="center"><div class="pill">Popular route details</div><h2>Boston to Florida moves need clear planning.</h2><p>Route, access, timing, and inventory details can change how a moving request is reviewed. These examples help organize the common details for this lane.</p></div><div class="cards"><div class="card"><h3>Common pickup areas</h3><ul><li>Boston apartments and condos</li><li>Cambridge / Somerville / Brookline pickups</li><li>North Shore and South Shore homes</li><li>Greater Boston suburbs</li><li>Massachusetts storage units</li></ul></div><div class="card"><h3>Common destination areas</h3><ul><li>Miami / Fort Lauderdale / Boca Raton</li><li>Orlando / Tampa / Sarasota</li><li>Naples / Fort Myers / Gulf Coast</li><li>Jacksonville / North Florida</li><li>The Villages and Central Florida</li></ul></div><div class="card"><h3>Popular route combinations</h3><ul><li>Boston to Miami / Fort Lauderdale</li><li>Cambridge to Orlando</li><li>Brookline to Boca Raton</li><li>North Shore to Tampa</li><li>South Shore to Naples</li></ul></div></div></div></section>
 
-      <div class="trust-item">
-        <div class="icon">✉</div>
-        <div>
-          <h3>Simple Online Request</h3>
-          <p>Submit your route online and get Boston to Florida moving quote help without pressure.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <section id="cost"><div class="container"><div class="center"><div class="pill">Moving cost guide</div><h2>How much does a Boston to Florida move cost?</h2><p>Boston to Florida moving costs vary based on shipment size, mileage, building access, stairs/elevators, packing, storage, move date, delivery timing, and provider availability. These ranges are general planning examples only.</p></div><div class="cost-grid"><div class="cost-card"><h3>Studio / 1 Bedroom</h3><div class="price">$1,800–$4,500+</div><p>Smaller shipments can vary based on minimum requirements, pickup/delivery access, and timing.</p></div><div class="cost-card"><h3>2 Bedroom</h3><div class="price">$3,500–$7,500+</div><p>Pricing depends on inventory volume, route, packing, stairs, elevator use, and service availability.</p></div><div class="cost-card"><h3>3 Bedroom</h3><div class="price">$5,500–$10,500+</div><p>Larger household moves may require more detailed inventory, timing, packing, and access review.</p></div><div class="cost-card"><h3>Large Home / Specialty Move</h3><div class="price">$8,500–$15,000+</div><p>Large homes, specialty items, storage, packing, or tight building access can affect final quote options.</p></div></div><div class="note-box"><div class="icon">✓</div><div>Estimated ranges are for general planning only. Final pricing depends on move details, route, shipment size, service availability, origin/destination access, packing, storage, and provider pricing.</div></div></div></section>
 
-  <section id="routes">
-    <div class="container">
-      <div class="center">
-        <div class="pill">Popular Boston to Florida routes</div>
-        <h2>Boston to Florida moves need clear pickup, destination, access, and timing details.</h2>
-        <p>
-          Boston to Florida moving requests often involve city access, apartment or condo rules,
-          parking, stairs, elevators, Florida delivery city, packing, storage, shipment size,
-          scheduling windows, and route availability. This page helps organize those details
-          so your request can be reviewed more clearly.
-        </p>
-      </div>
+  <section style="background:var(--soft);"><div class="container"><div class="center"><div class="pill">Access details</div><h2>The details that can change your moving quote request.</h2><p>Access is one of the biggest reasons long-distance moving requests need review. Clear notes can help avoid surprises later.</p></div><div class="cards"><div class="card"><h3>Boston pickup details</h3><ul><li>Downtown Boston parking and loading access</li><li>Elevator reservations and building time windows</li><li>Certificate of Insurance requests for condos or managed buildings</li><li>Walk-ups, tight streets, and long carries</li><li>Storage pickup timing around Greater Boston</li></ul></div><div class="card"><h3>Florida delivery details</h3><ul><li>Florida condo elevator reservations</li><li>Gated community and HOA delivery rules</li><li>Long walk or shuttle situations</li><li>Storage-in-transit before final delivery</li><li>Seasonal timing for summer and snowbird moves</li></ul></div><div class="card highlight"><h3>What to include in your notes</h3><p>List large furniture, boxes, packing needs, storage, stairs, elevators, long walks, parking limits, building rules, and any date flexibility.</p></div></div></div></section>
 
-      <div class="cards">
-        <div class="card">
-          <h3>Boston to South Florida</h3>
-          <p>Request quote options from Boston to Miami, Fort Lauderdale, Boca Raton, West Palm Beach, Hollywood, Pompano Beach, Delray Beach, and nearby South Florida areas.</p>
-        </div>
+  <section><div class="container"><div class="center"><div class="pill">Related routes</div><h2>Explore related ModelMoving route pages.</h2><p>These related routes help customers compare nearby pickup areas, destination lanes, and specialty moving quote requests.</p></div><div class="route-links"><a class="route-link" href="/massachusetts-to-florida-moving-quotes/">Massachusetts to Florida →</a><a class="route-link" href="/new-york-to-florida-moving-quotes/">New York to Florida →</a><a class="route-link" href="/connecticut-to-florida-moving-quotes/">Connecticut to Florida →</a><a class="route-link" href="/long-island-to-florida-moving-quotes/">Long Island to Florida →</a><a class="route-link" href="/north-jersey-to-florida-moving-quotes/">North Jersey to Florida →</a><a class="route-link" href="/boston-long-distance-moving-quotes/">Boston Long-Distance →</a></div></div></section>
 
-        <div class="card">
-          <h3>Boston to Gulf Coast Florida</h3>
-          <p>Helpful for moves from Boston to Naples, Fort Myers, Cape Coral, Sarasota, Bradenton, Tampa, St. Petersburg, Clearwater, and nearby Gulf Coast destinations.</p>
-        </div>
+  <section id="faq" style="background:var(--soft);"><div class="container split"><div><div class="pill">FAQ</div><h2>Boston to Florida moving quote questions.</h2><p style="color:var(--muted);font-size:1.08rem;">These common questions help customers understand what may affect a moving quote request before speaking with a relocation specialist or moving provider.</p></div><div class="faq"><div class="faq-item"><h3>Is ModelMoving a Boston to Florida moving company?</h3><p>ModelMoving is a moving quote request and matching platform. We help organize your request and may connect you with selected moving partners based on route, timing, size, and availability.</p></div><div class="faq-item"><h3>Can I request a quote for Boston to Florida?</h3><p>Yes. You can submit your pickup, delivery, move date, home size, and access details for a Boston to Florida moving quote request.</p></div><div class="faq-item"><h3>What information helps the quote request?</h3><p>Pickup city/ZIP, delivery city/ZIP, move date, home size, inventory, packing needs, storage, stairs, elevators, parking access, and special items all help.</p></div><div class="faq-item"><h3>Can I submit if I only have an estimated move date?</h3><p>Yes. If your date is not exact yet, add your best estimated move window in the notes so the request can still be reviewed.</p></div><div class="faq-item"><h3>Can packing or storage be included?</h3><p>You can mention packing, fragile items, storage, or special handling in your notes. Availability and pricing depend on route, timing, and provider options.</p></div><div class="faq-item"><h3>Is the quote request free?</h3><p>Yes. Submitting a request through ModelMoving is free and there is no obligation.</p></div></div></div></section>
 
-        <div class="card">
-          <h3>Boston to Central Florida</h3>
-          <p>Submit requests for moves from Boston to Orlando, Kissimmee, Lakeland, The Villages, Ocala, Winter Park, and surrounding Central Florida areas.</p>
-        </div>
+  <section><div class="container"><div class="cta"><div><h2>Planning a Boston to Florida move?</h2><p>Submit your route, shipment details, access notes, and timing so your quote request can be reviewed more clearly.</p></div><a href="#quote" class="btn">Find My Boston to FL Moving Quotes →</a></div></div></section>
 
-        <div class="card">
-          <h3>Boston to Northeast Florida</h3>
-          <p>Popular for customers moving from Boston to Jacksonville, St. Augustine, Palm Coast, Gainesville, Daytona Beach, and nearby Florida areas.</p>
-        </div>
-
-        <div class="card">
-          <h3>Metro Boston to Florida</h3>
-          <p>Helpful for moves from Cambridge, Brookline, Somerville, Medford, Malden, Newton, Waltham, Quincy, and nearby Metro Boston areas to Florida.</p>
-        </div>
-
-        <div class="card">
-          <h3>Greater Boston to Florida</h3>
-          <p>Request quote options from the North Shore, South Shore, MetroWest, Worcester-area suburbs, and nearby Massachusetts communities to Florida.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="cost" style="background: var(--soft);">
-    <div class="container">
-      <div class="center">
-        <div class="pill">Moving cost guide</div>
-        <h2>How much does a Boston to Florida move cost?</h2>
-        <p>
-          Boston to Florida moving costs vary based on shipment size, pickup and delivery access,
-          packing, storage, move date, mileage, Florida destination, route demand, seasonal timing,
-          and provider availability. These ranges are general planning examples only.
-        </p>
-      </div>
-
-      <div class="cost-grid">
-        <div class="cost-card">
-          <h3>Studio / 1 Bedroom</h3>
-          <div class="price">$1,800–$4,600+</div>
-          <p>Smaller Boston to Florida shipments may vary based on minimums, destination city, pickup access, stairs, elevator details, timing, and available route options.</p>
-        </div>
-
-        <div class="cost-card">
-          <h3>2 Bedroom</h3>
-          <div class="price">$3,200–$7,600+</div>
-          <p>Pricing depends on inventory volume, packing needs, elevators, parking, Florida destination, route timing, and availability.</p>
-        </div>
-
-        <div class="cost-card">
-          <h3>3 Bedroom</h3>
-          <div class="price">$5,600–$11,800+</div>
-          <p>Larger household moves may require more detailed inventory review, access notes, shipment planning, and scheduling flexibility.</p>
-        </div>
-
-        <div class="cost-card">
-          <h3>4+ Bedroom / Large Move</h3>
-          <div class="price">$8,500–$18,500+</div>
-          <p>Large homes, specialty items, packing, storage, tight timing, city access, and difficult delivery access can affect quote options.</p>
-        </div>
-      </div>
-
-      <div class="note-box">
-        <div class="icon">✓</div>
-        <div>
-          Estimated ranges are for general planning only. Final pricing depends on move details, route,
-          shipment size, service availability, origin and destination access, packing, storage,
-          timing, and provider pricing.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="center">
-        <div class="pill">Why details matter</div>
-        <h2>A better Boston to Florida quote request starts with clearer move details.</h2>
-        <p>
-          Boston to Florida moves can be affected by pickup access, apartment or condo rules,
-          elevator reservations, truck parking, shipment size, packing needs, storage timing,
-          Florida delivery access, route timing, and seasonal demand. Sharing those details early
-          can help your request get reviewed more accurately.
-        </p>
-      </div>
-
-      <div class="cards">
-        <div class="card">
-          <h3>Boston Pickup Access</h3>
-          <p>Street parking, building rules, stairs, elevators, long walks, loading zones, storage pickup details, and city or suburban access can affect planning.</p>
-        </div>
-
-        <div class="card">
-          <h3>Florida Destination</h3>
-          <p>Delivery city, condo access, elevators, gated communities, parking, delivery timing, and destination flexibility can change how a request is reviewed.</p>
-        </div>
-
-        <div class="card">
-          <h3>Shipment Size</h3>
-          <p>Furniture volume, boxes, fragile items, packing requests, storage, and special items can all affect quote options.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq" style="background: var(--soft);">
-    <div class="container split">
-      <div>
-        <div class="pill">FAQ</div>
-        <h2>Boston to Florida moving quote questions.</h2>
-        <p style="color: var(--muted); font-size: 1.08rem;">
-          These common questions help customers understand what may affect a Boston to Florida
-          moving quote request before speaking with a relocation specialist or moving provider.
-        </p>
-      </div>
-
-      <div class="faq">
-        <div class="faq-item">
-          <h3>Is ModelMoving a moving company?</h3>
-          <p>No. ModelMoving is a moving quote request and matching platform. We help organize your request and may connect you with available moving partners.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Can I request quotes for a Boston to Florida move?</h3>
-          <p>Yes. You can submit a request for long-distance moves from Boston and nearby Massachusetts areas to Florida destinations statewide.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Which Boston pickup areas can I request?</h3>
-          <p>You can request help from Boston, Cambridge, Brookline, Newton, Quincy, Somerville, Medford, Malden, Waltham, South Shore, North Shore, MetroWest, and nearby communities.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Which Florida destinations can I request?</h3>
-          <p>You can request help for Miami, Fort Lauderdale, Boca Raton, West Palm Beach, Naples, Fort Myers, Tampa, Orlando, Jacksonville, Sarasota, and surrounding Florida areas.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>What information helps with a better quote request?</h3>
-          <p>Pickup city/ZIP, Florida delivery city, move date, home size, inventory, packing needs, storage, stairs, elevators, parking, gated access, and special items all help.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Is the quote request free?</h3>
-          <p>Yes. Submitting a request through ModelMoving is free and there is no obligation.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="cta">
-        <div>
-          <h2>Planning a move from Boston to Florida?</h2>
-          <p>Submit your route, shipment details, pickup access, Florida destination, and timing so your quote request can be reviewed more clearly.</p>
-        </div>
-        <a href="#quote" class="btn">Find My Boston to Florida Quotes →</a>
-      </div>
-    </div>
-  </section>
-
-  <div class="disclaimer">
-    ModelMoving is a moving quote request and matching platform that helps connect customers with selected moving partners based on route, availability, timing, and move details. Your request may be matched with available moving partners that can review your route and provide service details, availability, and pricing.
-  </div>
-
-  <footer class="footer">
-    © 2026 ModelMoving. Long-distance moving quote requests and route-based moving partner matching.
-  </footer>
-
+  <div class="disclaimer">ModelMoving is a moving quote request and matching platform that helps connect customers with selected moving partners based on route, availability, timing, and move details. Your request may be matched with available moving partners that can review your route and provide service details, availability, and pricing.</div>
+  <footer class="footer">© 2026 ModelMoving. Long-distance moving quote requests and route-based moving partner matching.</footer>
 </body>
 </html>
