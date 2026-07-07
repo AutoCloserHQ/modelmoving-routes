@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>How Long-Distance Moving Quotes Work | ModelMoving</title>
+  <meta name="description" content="Learn how long-distance moving quotes work, what affects pricing, and what details help create a clearer moving quote request." />
+  <link rel="canonical" href="https://routes.modelmoving.com/how-long-distance-moving-quotes-work.html" />
+
+  <link rel="icon" href="https://routes.modelmoving.com/ModelMoving-Logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="https://routes.modelmoving.com/ModelMoving-Logo.png">
+  <meta property="og:title" content="How Long-Distance Moving Quotes Work | ModelMoving">
+  <meta property="og:description" content="Learn how long-distance moving quotes work, what affects pricing, and what details help create a clearer moving quote request.">
+  <meta property="og:image" content="https://routes.modelmoving.com/ModelMoving-Logo.png">
+  <meta name="twitter:image" content="https://routes.modelmoving.com/ModelMoving-Logo.png">
+
+  <style>
+    :root {
+      --navy: #102b4a;
+      --navy-dark: #07182f;
+      --gold: #c79a3b;
+      --cream: #f7f4ee;
+      --soft: #f8fafc;
+      --white: #ffffff;
+      --text: #16283d;
+      --muted: #65758b;
+      --border: #dfe6ef;
+      --green: #2f8f55;
+      --shadow: 0 22px 70px rgba(16,43,74,.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.65;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .nav {
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid rgba(16,43,74,.08);
+      padding: 16px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .mark {
+      width: 54px;
+      height: 54px;
+      border: 2px solid var(--gold);
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background: var(--navy-dark);
+      box-shadow: 0 8px 22px rgba(16,43,74,.16);
+      flex: 0 0 54px;
+    }
+
+    .mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .brand-title {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .brand-sub {
+      font-size: .72rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 800;
+      margin-top: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      font-weight: 800;
+      color: var(--text);
+      font-size: .92rem;
+    }
+
+    .nav-links a:not(.nav-cta):hover {
+      color: var(--gold);
+    }
+
+    .nav-cta {
+      background: var(--navy);
+      color: white;
+      padding: 13px 22px;
+      border-radius: 12px;
+      box-shadow: 0 10px 26px rgba(16,43,74,.18);
+    }
+
+    .hero {
+      min-height: 760px;
+      display: grid;
+      align-items: center;
+      padding: 72px 5%;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(199,154,59,.16), transparent 31%),
+        linear-gradient(90deg, rgba(247,244,238,.99) 0%, rgba(247,244,238,.91) 46%, rgba(247,244,238,.60) 100%),
+        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-grid {
+      max-width: 1240px;
+      width: 100%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.03fr .97fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-weight: 900;
+      font-size: .78rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(3rem, 6vw, 5.9rem);
+      line-height: .97;
+      letter-spacing: -3px;
+      color: var(--navy);
+      margin: 0 0 24px;
+      max-width: 860px;
+    }
+
+    .hero-copy {
+      font-size: 1.22rem;
+      color: #30425a;
+      max-width: 740px;
+      margin-bottom: 22px;
+    }
+
+    .route-highlight {
+      background: rgba(255,255,255,.88);
+      border: 1px solid rgba(199,154,59,.32);
+      border-left: 5px solid var(--gold);
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin: 20px 0 28px;
+      box-shadow: 0 14px 40px rgba(16,43,74,.08);
+      color: #263a52;
+      font-weight: 750;
+    }
+
+    .checks {
+      display: grid;
+      gap: 10px;
+      margin: 24px 0 34px;
+      font-weight: 800;
+      color: #263a52;
+    }
+
+    .check {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .check span {
+      background: #e8f3ea;
+      color: var(--green);
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      display: inline-grid;
+      place-items: center;
+      flex: 0 0 24px;
+      font-size: .85rem;
+      font-weight: 900;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border-radius: 12px;
+      padding: 15px 24px;
+      font-weight: 900;
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--navy);
+      color: white;
+      box-shadow: 0 14px 34px rgba(16,43,74,.20);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--navy);
+      border: 1px solid var(--border);
+    }
+
+    .form-card {
+      background: rgba(255,255,255,.98);
+      border: 1px solid rgba(16,43,74,.09);
+      border-radius: 26px;
+      padding: 30px;
+      box-shadow: 0 30px 80px rgba(16,43,74,.22);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .form-card:before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 7px;
+      background: linear-gradient(90deg, var(--navy), var(--gold), var(--navy));
+    }
+
+    .form-card h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      text-align: center;
+      color: var(--navy);
+      font-size: 2rem;
+      line-height: 1.1;
+      margin: 10px 0 6px;
+    }
+
+    .form-card p {
+      text-align: center;
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 13px;
+    }
+
+    label {
+      display: block;
+      font-weight: 900;
+      color: var(--text);
+      font-size: .84rem;
+      margin-bottom: 6px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      padding: 14px 14px;
+      font-size: .96rem;
+      font-family: inherit;
+      outline: none;
+      background: white;
+      color: var(--text);
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: rgba(199,154,59,.85);
+      box-shadow: 0 0 0 4px rgba(199,154,59,.13);
+    }
+
+    textarea {
+      min-height: 92px;
+      resize: vertical;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    button {
+      width: 100%;
+      background: var(--navy);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-top: 14px;
+      font-size: 1.05rem;
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 0 16px 34px rgba(16,43,74,.18);
+    }
+
+    .secure {
+      text-align: center;
+      color: var(--muted);
+      font-size: .82rem;
+      margin-top: 12px;
+    }
+
+    .trust-strip {
+      background: white;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 22px 5%;
+    }
+
+    .trust-grid {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 16px;
+    }
+
+    .trust-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      border-right: 1px solid var(--border);
+      padding-right: 16px;
+    }
+
+    .trust-item:last-child {
+      border-right: 0;
+    }
+
+    .icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      background: #edf7f0;
+      color: var(--green);
+      display: grid;
+      place-items: center;
+      flex: 0 0 44px;
+      font-weight: 900;
+    }
+
+    .gold-icon {
+      background: #fff7e4;
+      color: #9b6f19;
+    }
+
+    .trust-item h3 {
+      margin: 0;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: .86rem;
+    }
+
+    .trust-item p {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    section {
+      padding: 78px 5%;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    .center {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 38px;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 8px 18px;
+      border: 1px solid #cfe0ef;
+      background: #edf5fb;
+      color: var(--navy);
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: .72rem;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .pill.gold {
+      border-color: rgba(199,154,59,.35);
+      background: #fff7e4;
+      color: #8a621b;
+    }
+
+    h2 {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(2.3rem, 4vw, 4rem);
+      line-height: 1.05;
+      color: var(--navy);
+      letter-spacing: -2px;
+      margin: 0 0 18px;
+    }
+
+    .center p {
+      color: #52657c;
+      font-size: 1.12rem;
+      margin: 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 16px 45px rgba(16,43,74,.05);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      color: var(--navy);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.45rem;
+      line-height: 1.15;
+      margin: 0 0 10px;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .steps {
+      display: grid;
+      gap: 16px;
+      counter-reset: steps;
+    }
+
+    .step {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      display: grid;
+      grid-template-columns: 54px 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+
+    .step:before {
+      counter-increment: steps;
+      content: counter(steps);
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      background: var(--navy);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      box-shadow: 0 10px 24px rgba(16,43,74,.16);
+    }
+
+    .step h3 {
+      margin: 0 0 4px;
+      color: var(--navy);
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .answer-box {
+      background: #fff7e4;
+      border: 1px solid rgba(199,154,59,.35);
+      border-left: 5px solid var(--gold);
+      border-radius: 18px;
+      padding: 24px;
+      color: #3b4c61;
+      font-weight: 750;
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 14px;
+    }
+
+    .related-link {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      color: var(--navy);
+      font-weight: 900;
+      box-shadow: 0 10px 26px rgba(16,43,74,.04);
+    }
+
+    .related-link:hover {
+      border-color: rgba(199,154,59,.65);
+      color: #8a621b;
+    }
+
+    .faq {
+      display: grid;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 22px;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 6px;
+      color: var(--navy);
+      font-size: 1.05rem;
+    }
+
+    .faq-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .cta {
+      background:
+        radial-gradient(circle at 85% 12%, rgba(199,154,59,.24), transparent 30%),
+        var(--navy);
+      color: white;
+      border-radius: 26px;
+      padding: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .cta h2 {
+      color: white;
+      font-size: clamp(2rem, 3vw, 3rem);
+      margin-bottom: 8px;
+    }
+
+    .cta p {
+      color: #d8e4f0;
+      margin: 0;
+    }
+
+    .cta .btn {
+      background: white;
+      color: var(--navy);
+      min-width: 230px;
+    }
+
+    .disclaimer {
+      background: #eef3f8;
+      border-top: 1px solid var(--border);
+      padding: 30px 5%;
+      color: #42546b;
+      font-size: .93rem;
+      text-align: center;
+    }
+
+    .footer {
+      background: var(--navy-dark);
+      color: #dce8f4;
+      padding: 30px 5%;
+      text-align: center;
+      font-size: .9rem;
+    }
+
+    @media (max-width: 1080px) {
+      .related-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .trust-grid,
+      .cards,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 48px;
+      }
+
+      .trust-item {
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 14px;
+      }
+
+      .trust-item:last-child {
+        border-bottom: 0;
+      }
+
+      .cta {
+        display: block;
+        text-align: center;
+      }
+
+      .cta .btn {
+        margin-top: 22px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .form-grid,
+      .related-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 3.05rem;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .brand-title {
+        font-size: 1.45rem;
+      }
+
+      .mark {
+        width: 44px;
+        height: 44px;
+        flex-basis: 44px;
+      }
+
+      .form-card {
+        padding: 24px 18px;
+      }
+
+      .step {
+        grid-template-columns: 1fr;
+      }
+
+      .cta {
+        padding: 30px 22px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "How Long-Distance Moving Quotes Work",
+    "description": "Learn how long-distance moving quotes work, what affects pricing, and what details help create a clearer moving quote request.",
+    "url": "https://routes.modelmoving.com/how-long-distance-moving-quotes-work.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "ModelMoving",
+      "url": "https://modelmoving.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://routes.modelmoving.com/ModelMoving-Logo.png"
+      }
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What affects a long-distance moving quote?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Long-distance moving quote options can be affected by shipment size, route, move date, pickup access, delivery access, stairs, elevators, packing, storage, special items, and provider availability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are online moving quote ranges final prices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Online moving quote ranges are usually planning examples only. Final pricing depends on move details, provider pricing, route, inventory, access, timing, and service availability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What details should I provide for a long-distance moving quote?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Helpful details include pickup ZIP, delivery ZIP, move date, home size, inventory, packing needs, storage needs, stairs, elevators, parking, long carry, building rules, and special items."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <header class="nav">
+    <a href="https://modelmoving.com" class="brand">
+      <div class="mark">
+        <img src="https://routes.modelmoving.com/ModelMoving-Logo.png" alt="ModelMoving logo">
+      </div>
+      <div>
+        <div class="brand-title">Model Moving</div>
+        <div class="brand-sub">Long-Distance Quote Help</div>
+      </div>
+    </a>
+
+    <nav class="nav-links">
+      <a href="https://routes.modelmoving.com/">Routes</a>
+      <a href="#guide">Quote Factors</a>
+      <a href="#faq">FAQ</a>
+      <a href="#quote" class="nav-cta">Get Quote</a>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Long-distance moving quote guide</div>
+        <h1>How Long-Distance Moving Quotes Work</h1>
+
+        <p class="hero-copy">
+          A long-distance moving quote is usually based on more than mileage. Shipment size, route, move date, pickup access, delivery access, packing, storage, and provider availability can all affect which quote options may fit.
+        </p>
+
+        <div class="route-highlight">
+          ModelMoving helps customers organize quote requests so important details are easier to review before selected moving partners may follow up.
+        </div>
+
+        <div class="checks">
+          <div class="check"><span>✓</span> Learn what details can affect long-distance moving quotes</div>
+          <div class="check"><span>✓</span> Understand why route, inventory, access, and timing matter</div>
+          <div class="check"><span>✓</span> Submit a free, no-obligation moving quote request</div>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="#quote" class="btn btn-primary">Request Quote Options →</a>
+          <a href="https://routes.modelmoving.com/" class="btn btn-secondary">Browse Route Pages →</a>
+        </div>
+      </div>
+
+      <aside class="form-card" id="quote">
+        <h2>Request Moving Quote Help</h2>
+        <p>Tell us your route and move details.</p>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="6bc5385c-1b5b-4955-bb2e-fc6da8bc924d">
+          <input type="hidden" name="subject" value="New Long-Distance Moving Quote Guide Request">
+          <input type="hidden" name="source" value="ModelMoving Support Page">
+          <input type="hidden" name="route_page" value="How Long-Distance Moving Quotes Work">
+          <input type="hidden" name="service_area" value="General Long-Distance Moving">
+          <input type="hidden" name="lead_type" value="Long-Distance Moving Quote Request">
+
+          <div class="form-grid">
+            <div>
+              <label>Pickup ZIP / City</label>
+              <input type="text" name="pickup_zip" placeholder="Pickup city or ZIP" required>
+            </div>
+
+            <div>
+              <label>Delivery ZIP / City</label>
+              <input type="text" name="delivery_zip" placeholder="Delivery city or ZIP" required>
+            </div>
+
+            <div>
+              <label>Move Date</label>
+              <input type="date" name="move_date">
+            </div>
+
+            <div>
+              <label>Home Size</label>
+              <select name="home_size">
+                <option value="">Select Size</option>
+                <option>Studio</option>
+                <option>1 Bedroom</option>
+                <option>2 Bedroom</option>
+                <option>3 Bedroom</option>
+                <option>4 Bedroom</option>
+                <option>5+ Bedroom</option>
+                <option>Storage Unit</option>
+                <option>Office / Commercial</option>
+              </select>
+            </div>
+
+            <div>
+              <label>Full Name</label>
+              <input type="text" name="full_name" placeholder="Your Name" required>
+            </div>
+
+            <div>
+              <label>Phone Number</label>
+              <input type="tel" name="phone" placeholder="Phone Number" required>
+            </div>
+
+            <div class="full">
+              <label>Email</label>
+              <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+
+            <div class="full">
+              <label>Move Notes</label>
+              <textarea name="message" placeholder="Pickup/delivery ZIPs, move date, inventory size, stairs/elevator, parking, packing, storage, special items, timing, or questions."></textarea>
+            </div>
+          </div>
+
+          <button type="submit">Find My Moving Quote Options →</button>
+          <div class="secure">🔒 Your information is secure. No obligation. By submitting this form, you agree that ModelMoving and selected moving partners may contact you about your moving quote request by phone, text, or email. Message/data rates may apply. Consent is not required to purchase services.</div>
+        </form>
+      </aside>
+    </div>
+  </main>
+
+  <div class="trust-strip">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="icon">⌂</div>
+        <div>
+          <h3>Shipment Size</h3>
+          <p>Furniture, boxes, and specialty items can affect the quote review.</p>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <div class="icon gold-icon">↗</div>
+        <div>
+          <h3>Route</h3>
+          <p>Pickup and delivery markets can affect planning and availability.</p>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <div class="icon">⇅</div>
+        <div>
+          <h3>Access</h3>
+          <p>Stairs, elevators, parking, long carries, and loading rules matter.</p>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <div class="icon gold-icon">◷</div>
+        <div>
+          <h3>Timing</h3>
+          <p>Move dates, flexibility, and storage needs can affect available options.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="guide">
+    <div class="container">
+      <div class="center">
+        <div class="pill gold">Quote factors</div>
+        <h2>What affects a long-distance moving quote?</h2>
+        <p>
+          These are the core details customers should gather before submitting a moving quote request.
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Route and mileage</h3>
+          <p>Pickup city or ZIP, delivery city or ZIP, and the route lane can help determine which options may fit.</p>
+        </div>
+
+        <div class="card">
+          <h3>Inventory volume</h3>
+          <p>Home size, furniture, boxes, bulky pieces, fragile items, and specialty items can affect planning.</p>
+        </div>
+
+        <div class="card">
+          <h3>Access conditions</h3>
+          <p>Stairs, elevators, long walks, tight streets, parking limits, shuttles, and building rules can affect labor and timing.</p>
+        </div>
+
+        <div class="card">
+          <h3>Packing needs</h3>
+          <p>Full packing, partial packing, fragile-only packing, supplies, and special handling can affect service details.</p>
+        </div>
+
+        <div class="card">
+          <h3>Storage needs</h3>
+          <p>Storage-in-transit, delayed delivery, temporary storage, and flexible delivery windows should be included early.</p>
+        </div>
+
+        <div class="card">
+          <h3>Move date</h3>
+          <p>Peak season, month-end timing, short notice, and date flexibility can affect availability and quote options.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" style="background: var(--soft);">
+    <div class="container split">
+      <div>
+        <div class="pill">How quote requests get reviewed</div>
+        <h2>Moving quote requests work best when the details are complete.</h2>
+        <p style="color: var(--muted); font-size: 1.08rem; margin-top: 0;">
+          A vague request may only say “moving from New York to Florida.” A clearer request explains pickup access, delivery access, inventory, packing, storage, timing, and special items.
+        </p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div>
+            <h3>Start with pickup and delivery</h3>
+            <p>Use exact cities or ZIP codes when possible. If your destination is not final, include the likely area.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div>
+            <h3>Describe the shipment</h3>
+            <p>Include home size, major furniture, box estimate, garage or storage items, and anything oversized or fragile.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div>
+            <h3>Add access notes</h3>
+            <p>Mention stairs, elevators, parking, loading dock, long carry, shuttle possibilities, building rules, and COI needs.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div>
+            <h3>Review available options</h3>
+            <p>Compare service details, availability, pricing, terms, and timing directly with any available moving partner that follows up.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container split">
+      <div class="answer-box">
+        <strong>Quick answer:</strong> A long-distance moving quote works by reviewing route, shipment size, move date, access, packing, storage, and provider availability. ModelMoving helps organize those details so selected moving partners may review the request more clearly.
+      </div>
+
+      <div>
+        <div class="pill gold">Important note</div>
+        <h2>Planning ranges are not final prices.</h2>
+        <p style="color: var(--muted); font-size: 1.08rem; margin-top: 0;">
+          Online moving cost ranges can be useful for early planning, but they are not a substitute for a detailed review. Final pricing may depend on provider availability, actual inventory, packing, storage, access, delivery requirements, timing, and changes to the route.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="background: var(--soft);">
+    <div class="container split">
+      <div>
+        <div class="pill">FAQ</div>
+        <h2>Long-distance moving quote questions.</h2>
+        <p style="color: var(--muted); font-size: 1.08rem;">
+          These answers help customers understand what may affect a quote request before speaking with a relocation specialist or moving provider.
+        </p>
+      </div>
+
+      <div class="faq">
+        <div class="faq-item">
+          <h3>What affects a long-distance moving quote?</h3>
+          <p>Common factors include shipment size, route mileage, pickup and delivery access, stairs, elevators, packing, storage, timing, special items, and provider availability.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Are online moving quote ranges final prices?</h3>
+          <p>General online ranges are planning examples only. Final pricing depends on move details, provider pricing, route, inventory, access, and service availability.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Why does inventory matter so much?</h3>
+          <p>Inventory helps estimate shipment volume, labor, equipment, packing needs, and truck space. Missing items can affect the final review.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can my quote change after submission?</h3>
+          <p>A quote may change if move date, inventory, packing, access, storage, delivery needs, or route details change.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>What is the best way to get a clearer quote request?</h3>
+          <p>Include pickup ZIP, delivery ZIP, move date, home size, inventory, stairs, elevators, parking, packing needs, storage needs, special items, and any building rules.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="center">
+        <div class="pill gold">Internal links</div>
+        <h2>Compare route-specific moving quote pages.</h2>
+        <p>
+          After learning how quotes work, use route-specific pages to submit a more focused moving quote request.
+        </p>
+      </div>
+
+      <div class="related-grid">
+        <a class="related-link" href="https://routes.modelmoving.com/">Route Hub →</a>
+        <a class="related-link" href="https://routes.modelmoving.com/how-modelmoving-works.html">How ModelMoving Works →</a>
+        <a class="related-link" href="https://routes.modelmoving.com/moving-from-new-york-to-florida-guide.html">NY to Florida Guide →</a>
+        <a class="related-link" href="https://routes.modelmoving.com/new-york-to-florida-moving-quotes/">New York to Florida →</a>
+        <a class="related-link" href="https://routes.modelmoving.com/new-jersey-to-florida-moving-quotes/">New Jersey to Florida →</a>
+        <a class="related-link" href="https://routes.modelmoving.com/long-island-to-florida-moving-quotes/">Long Island to Florida →</a>
+        <a class="related-link" href="https://routes.modelmoving.com/westchester-to-florida-moving-quotes/">Westchester to Florida →</a>
+        <a class="related-link" href="https://routes.modelmoving.com/connecticut-to-florida-moving-quotes/">Connecticut to Florida →</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta">
+        <div>
+          <h2>Have your route and inventory ready?</h2>
+          <p>Submit your pickup, delivery, shipment, timing, and access details for a clearer quote request.</p>
+        </div>
+        <a href="#quote" class="btn">Request Quote Options →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="disclaimer">
+    ModelMoving is a moving quote request and matching platform that helps connect customers with selected moving partners based on route, availability, timing, and move details. Your request may be matched with available moving partners that can review your route and provide service details, availability, and pricing.
+  </div>
+
+  <footer class="footer">
+    © 2026 ModelMoving. Long-distance moving quote requests and route-based moving partner matching.
+  </footer>
+
+</body>
+</html>
