@@ -515,6 +515,59 @@
       color: var(--gold);
     }
 
+    .guide-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 16px 45px rgba(16,43,74,.05);
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .guide-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 24px 60px rgba(16,43,74,.14);
+      border-color: rgba(199,154,59,.55);
+    }
+
+    .guide-card::before {
+      content: "Moving Guide";
+      display: inline-block;
+      background: var(--navy);
+      color: white;
+      border-radius: 999px;
+      padding: 7px 13px;
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .guide-card.gold-guide::before {
+      content: "Start Here";
+      background: var(--gold);
+    }
+
+    .guide-card h3 {
+      color: var(--navy);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.45rem;
+      line-height: 1.15;
+      margin: 0 0 10px;
+    }
+
+    .guide-card p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .guide-card p + p {
+      margin-top: 16px;
+    }
+
     .cta {
       background: var(--navy);
       color: white;
@@ -663,6 +716,7 @@
     </a>
 
     <nav class="nav-links">
+      <a href="#guides">Guides</a>
       <a href="#routes">Routes</a>
       <a href="#quote-help">Quote Help</a>
       <a href="https://modelmoving.com" class="nav-cta">Main Site</a>
@@ -747,6 +801,38 @@
       </div>
     </div>
   </div>
+
+  <section id="guides" style="background:var(--soft);">
+    <div class="container">
+      <div class="center">
+        <div class="pill">Moving quote guides</div>
+        <h2>Start with helpful moving quote guides.</h2>
+        <p>
+          Learn how ModelMoving works, how long-distance moving quotes are reviewed, and what to know before planning a New York to Florida move.
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="guide-card gold-guide">
+          <h3><a href="/how-modelmoving-works.html">How ModelMoving Works</a></h3>
+          <p>Learn how ModelMoving helps organize route-based moving quote requests and may connect customers with selected moving partners.</p>
+          <p><a href="/how-modelmoving-works.html" class="route-link">Read guide →</a></p>
+        </div>
+
+        <div class="guide-card">
+          <h3><a href="/how-long-distance-moving-quotes-work.html">How Long-Distance Moving Quotes Work</a></h3>
+          <p>Understand what can affect long-distance moving quote options, including route, inventory, access, packing, storage, and timing.</p>
+          <p><a href="/how-long-distance-moving-quotes-work.html" class="route-link">Read guide →</a></p>
+        </div>
+
+        <div class="guide-card">
+          <h3><a href="/moving-from-new-york-to-florida-guide.html">Moving From New York to Florida Guide</a></h3>
+          <p>Plan a NY to FL move with details about New York pickup access, Florida delivery rules, timing, storage, and quote requests.</p>
+          <p><a href="/moving-from-new-york-to-florida-guide.html" class="route-link">Read guide →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="routes">
     <div class="container">
