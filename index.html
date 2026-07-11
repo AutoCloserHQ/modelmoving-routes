@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ModelMoving Long-Distance Moving Quote Routes</title>
-  <meta name="description" content="Explore route-based long-distance moving quote request pages for Northeast, Midwest, Long Island, Westchester, Fairfield County, North Jersey, Boston, Delaware, Maryland, Virginia, Ohio, Michigan, Hawaii, Honolulu, Alaska, Anchorage, Puerto Rico, Florida, Texas, Dallas-Fort Worth, North Carolina, South Carolina, South Florida, and popular city-to-state or state-to-state relocation routes." />
-  <link rel="canonical" href="https://routes.modelmoving.com/" />
+  <title>Long-Distance Moving Routes &amp; Quote Help | ModelMoving</title>
+  <meta name="description" content="Search ModelMoving route guides for Northeast, Midwest, Florida, Texas, Hawaii, Alaska, Puerto Rico, and popular long-distance moving routes.">
+  <link rel="canonical" href="https://routes.modelmoving.com/">
 
   <link rel="icon" href="https://routes.modelmoving.com/ModelMoving-Logo.png" type="image/png">
   <link rel="apple-touch-icon" href="https://routes.modelmoving.com/ModelMoving-Logo.png">
   <meta property="og:image" content="https://routes.modelmoving.com/ModelMoving-Logo.png">
+  <meta property="og:title" content="Long-Distance Moving Routes &amp; Quote Help | ModelMoving">
+  <meta property="og:description" content="Search route guides and request long-distance moving quote help for regional, interstate, island, and specialty moves.">
+  <meta property="og:url" content="https://routes.modelmoving.com/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://routes.modelmoving.com/ModelMoving-Logo.png">
 
   <style>
@@ -115,10 +120,10 @@
     }
 
     .hero {
-      min-height: 720px;
+      min-height: 560px;
       display: grid;
       align-items: center;
-      padding: 70px 5%;
+      padding: 56px 5%;
       background:
         linear-gradient(90deg, rgba(247,244,238,.98) 0%, rgba(247,244,238,.86) 44%, rgba(247,244,238,.52) 100%),
         url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80');
@@ -239,6 +244,59 @@
       font-weight: 700;
     }
 
+    .hero-finder {
+      margin-top: 22px;
+    }
+
+    .hero-finder label {
+      display: block;
+      color: var(--navy);
+      font-weight: 900;
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 9px;
+    }
+
+    .filter-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .filter-chip {
+      border: 1px solid rgba(16,43,74,.18);
+      background: var(--soft);
+      color: var(--navy);
+      border-radius: 999px;
+      padding: 8px 11px;
+      font-weight: 800;
+      font-size: .78rem;
+      cursor: pointer;
+      transition: background .2s ease, color .2s ease, border-color .2s ease;
+    }
+
+    .filter-chip:hover,
+    .filter-chip.active {
+      background: var(--gold);
+      color: white;
+      border-color: var(--gold);
+    }
+
+    .mobile-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: white;
+      color: var(--navy);
+      font-size: 1.35rem;
+      font-weight: 900;
+      cursor: pointer;
+    }
+
     .trust-strip {
       background: white;
       border-top: 1px solid var(--border);
@@ -294,6 +352,10 @@
 
     section {
       padding: 76px 5%;
+    }
+
+    .section-soft {
+      background: var(--soft);
     }
 
     .container {
@@ -427,6 +489,16 @@
       transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
       position: relative;
       overflow: hidden;
+    }
+
+    .card::after {
+      content: "⌖";
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      color: rgba(199,154,59,.42);
+      font-size: 1.25rem;
+      font-weight: 900;
     }
 
     .card:hover {
@@ -596,6 +668,18 @@
       min-width: 220px;
     }
 
+    .cta-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .cta .btn-primary {
+      background: var(--gold);
+      color: white;
+    }
+
     .disclaimer {
       background: #eef3f8;
       border-top: 1px solid var(--border);
@@ -622,6 +706,38 @@
 
       .nav-links {
         display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        padding: 18px 5%;
+        background: rgba(255,255,255,.98);
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 16px 35px rgba(16,43,74,.12);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links .nav-cta {
+        margin-top: 10px;
+        padding: 13px 18px;
+        text-align: center;
+        border-bottom: 0;
+      }
+
+      .mobile-toggle {
+        display: grid;
+        place-items: center;
       }
 
       .hero {
@@ -715,7 +831,9 @@
       </div>
     </a>
 
-    <nav class="nav-links">
+    <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
+
+    <nav class="nav-links" id="navLinks">
       <a href="#guides">Guides</a>
       <a href="#routes">Routes</a>
       <a href="#quote-help">Quote Help</a>
@@ -727,17 +845,12 @@
     <div class="hero-grid">
       <div>
         <div class="eyebrow">ModelMoving route hub</div>
-        <h1>Long-Distance Moving Quote Routes</h1>
+        <h1>Explore Moving Routes</h1>
 
         <p class="hero-copy">
-          Explore route-based moving quote options for Northeast, Midwest, New Jersey,
-          New York, Pennsylvania, Connecticut, Massachusetts, Delaware, Maryland, Virginia,
-          Long Island, Westchester, Fairfield County, North Jersey, Boston, Ohio, Michigan,
-          Cleveland, Detroit, Akron, Columbus, Cincinnati, Dayton, Toledo, Ann Arbor,
-          Grand Rapids, Lansing, Hawaii, Honolulu, Alaska, Anchorage, Puerto Rico and popular state-to-state
-          relocation routes including Florida, South Florida, Texas, North Carolina,
-          South Carolina, Hawaii, and Alaska. ModelMoving helps customers request organized
-          moving quote options based on route, timing, home size, and move details.
+          Search regional, interstate, island, and specialty moving guides by pickup area,
+          destination, city, or state. Choose the closest route to organize your move details
+          and request free, no-obligation quote help.
         </p>
 
         <div class="checks">
@@ -747,20 +860,31 @@
         </div>
 
         <div class="hero-buttons">
-          <a href="#routes" class="btn btn-primary">View Popular Routes →</a>
+          <a href="#routes" class="btn btn-primary">Browse All Routes →</a>
+          <a href="https://modelmoving.com" class="btn btn-secondary">Request General Quote</a>
         </div>
       </div>
 
       <aside class="form-card">
-        <h2>Route-Based Quote Help</h2>
-        <p>Pick the page that best matches the pickup area or specialty route.</p>
+        <h2>Find Your Route</h2>
+        <p>Search all 107 route pages by state, city, region, or destination.</p>
 
-        <div class="checks">
-          <div class="check"><span>✓</span> Northeast and high-value pickup pages</div>
-          <div class="check"><span>✓</span> Midwest, Ohio, and Michigan route pages</div>
-          <div class="check"><span>✓</span> Florida and South Florida destination pages</div>
-          <div class="check"><span>✓</span> Ohio and Michigan pickup-city growth pages</div>
-          <div class="check"><span>✓</span> Hawaii, Alaska, and Puerto Rico specialty pages</div>
+        <div class="hero-finder">
+          <label for="routeSearch">Search the route library</label>
+          <div class="route-search-wrap">
+            <input id="routeSearch" class="route-search" type="search" placeholder="Try Florida, Texas, Honolulu, North Jersey..." autocomplete="off">
+            <button class="clear-search" type="button" id="clearRouteSearch">Clear</button>
+          </div>
+          <div class="filter-chips" role="group" aria-label="Popular route filters">
+            <button class="filter-chip" type="button" data-filter="Northeast">Northeast</button>
+            <button class="filter-chip" type="button" data-filter="Midwest">Midwest</button>
+            <button class="filter-chip" type="button" data-filter="Florida">Florida</button>
+            <button class="filter-chip" type="button" data-filter="Texas">Texas</button>
+            <button class="filter-chip" type="button" data-filter="Hawaii">Hawaii</button>
+            <button class="filter-chip" type="button" data-filter="Alaska">Alaska</button>
+            <button class="filter-chip" type="button" data-filter="Puerto Rico">Puerto Rico</button>
+          </div>
+          <div class="route-count" id="routeCount" aria-live="polite">Showing all 107 route pages.</div>
         </div>
       </aside>
     </div>
@@ -787,7 +911,7 @@
       <div class="trust-item">
         <div class="icon">⌂</div>
         <div>
-          <h3>Homes & Apartments</h3>
+          <h3>Homes &amp; Apartments</h3>
           <p>Request help for houses, condos, apartments, storage units, and more.</p>
         </div>
       </div>
@@ -802,7 +926,7 @@
     </div>
   </div>
 
-  <section id="guides" style="background:var(--soft);">
+  <section id="guides" class="section-soft">
     <div class="container">
       <div class="center">
         <div class="pill">Moving quote guides</div>
@@ -845,16 +969,7 @@
         </p>
       </div>
 
-      <div class="route-finder">
-        <label for="routeSearch">Find your route faster</label>
-        <div class="route-search-wrap">
-          <input id="routeSearch" class="route-search" type="search" placeholder="Search by state, city, or route — example: Florida, South Florida, Texas, Long Island, Boston, North Jersey..." autocomplete="off">
-          <button class="clear-search" type="button" id="clearRouteSearch">Clear</button>
-        </div>
-        <div class="route-count" id="routeCount">Showing all route pages.</div>
-      </div>
-
-      <div class="no-routes" id="noRoutes">
+      <div class="no-routes" id="noRoutes" role="status">
         No exact route page found yet. Choose the closest pickup-area page or visit the main ModelMoving site to request quote help.
       </div>
 
@@ -1506,7 +1621,7 @@
     </div>
   </section>
 
-  <section id="quote-help" style="background:var(--soft);">
+  <section id="quote-help" class="section-soft">
     <div class="container">
       <div class="cta">
         <div>
@@ -1514,7 +1629,10 @@
           <p>Start with the closest pickup area or specialty route and submit your move details there.</p>
         </div>
 
-        <a href="#routes" class="btn">Browse Routes →</a>
+        <div class="cta-actions">
+          <a href="#routes" class="btn">Browse Routes →</a>
+          <a href="https://modelmoving.com" class="btn btn-primary">Request General Quote →</a>
+        </div>
       </div>
     </div>
   </section>
@@ -1533,6 +1651,9 @@
     const routeCards = Array.from(document.querySelectorAll('#routeCards .card'));
     const routeCount = document.getElementById('routeCount');
     const noRoutes = document.getElementById('noRoutes');
+    const filterChips = Array.from(document.querySelectorAll('.filter-chip'));
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
 
     function normalizeText(text) {
       return text.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').trim();
@@ -1555,7 +1676,7 @@
       noRoutes.style.display = visibleCount === 0 ? 'block' : 'none';
 
       if (!query) {
-        routeCount.textContent = 'Showing all route pages.';
+        routeCount.textContent = 'Showing all ' + routeCards.length + ' route pages.';
       } else if (visibleCount === 1) {
         routeCount.textContent = 'Showing 1 matching route page.';
       } else {
@@ -1565,11 +1686,45 @@
 
     routeSearch.addEventListener('input', filterRoutes);
 
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', function() {
+        const alreadyActive = chip.classList.contains('active');
+        filterChips.forEach(item => item.classList.remove('active'));
+        routeSearch.value = alreadyActive ? '' : chip.dataset.filter;
+        chip.classList.toggle('active', !alreadyActive);
+        filterRoutes();
+        document.getElementById('routes').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    routeSearch.addEventListener('input', function() {
+      filterChips.forEach(item => item.classList.remove('active'));
+    });
+
     clearRouteSearch.addEventListener('click', function() {
       routeSearch.value = '';
+      filterChips.forEach(item => item.classList.remove('active'));
       filterRoutes();
       routeSearch.focus();
     });
+
+    mobileToggle.addEventListener('click', function() {
+      const isOpen = navLinks.classList.toggle('open');
+      mobileToggle.setAttribute('aria-expanded', String(isOpen));
+      mobileToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+      mobileToggle.textContent = isOpen ? '×' : '☰';
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function() {
+        navLinks.classList.remove('open');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileToggle.setAttribute('aria-label', 'Open navigation');
+        mobileToggle.textContent = '☰';
+      });
+    });
+
+    filterRoutes();
   </script>
 
 </body>
