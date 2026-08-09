@@ -15,6 +15,15 @@
   <meta property="og:image" content="https://routes.modelmoving.com/ModelMoving-Logo.png">
   <meta name="twitter:image" content="https://routes.modelmoving.com/ModelMoving-Logo.png">
 
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJPYXXWGEV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KJPYXXWGEV');
+  </script>
+
   <style>
     :root {
       --navy: #102b4a;
@@ -879,13 +888,20 @@
         <h2>Get Your Free Quote Request</h2>
         <p>Tell us your Puerto Rico mainland route.</p>
 
-        <form action="https://api.web3forms.com/submit" method="POST">
+        <form action="https://api.web3forms.com/submit" method="POST" id="modelmoving-route-form">
           <input type="hidden" name="access_key" value="6bc5385c-1b5b-4955-bb2e-fc6da8bc924d">
           <input type="hidden" name="subject" value="New Puerto Rico Mainland Moving Quote Request">
           <input type="hidden" name="source" value="ModelMoving Routes">
           <input type="hidden" name="route_page" value="Puerto Rico Mainland Moving Quotes">
           <input type="hidden" name="service_area" value="Puerto Rico Mainland">
           <input type="hidden" name="lead_type" value="Puerto Rico Mainland Moving Quote Request">
+
+          <!-- ModelMoving 2D-1 attribution tracking -->
+          <input type="hidden" name="traffic_source" id="mmq-traffic-source" value="">
+          <input type="hidden" name="traffic_medium" id="mmq-traffic-medium" value="">
+          <input type="hidden" name="traffic_campaign" id="mmq-traffic-campaign" value="">
+          <input type="hidden" name="landing_page" id="mmq-landing-page" value="">
+          <input type="hidden" name="referrer" id="mmq-referrer" value="">
 
           <div class="form-grid">
             <div>
@@ -941,6 +957,7 @@
 
           <button type="submit">Find My Puerto Rico Moving Quotes →</button>
           <div class="secure">🔒 Your information is secure. No obligation. By submitting this form, you agree that ModelMoving and selected moving partners may contact you about your moving quote request by phone, text, or email. Message/data rates may apply. Consent is not required to purchase services.</div>
+          <div id="modelmoving-route-result" class="secure" aria-live="polite"></div>
         </form>
       </aside>
     </div>
@@ -1263,6 +1280,6 @@
   <footer class="footer">
     © 2026 ModelMoving. Long-distance moving quote requests and route-based moving partner matching.
   </footer>
-
+\n  <!-- ModelMoving Phase 2D-1 route attribution + lead tracking -->\n  <script>\n  (function(){\n    function initializeModelMovingRouteForm(){\n      const form = document.getElementById("modelmoving-route-form");\n      const result = document.getElementById("modelmoving-route-result");\n      const submitButton = form ? form.querySelector('button[type="submit"]') : null;\n      const trafficSource = document.getElementById("mmq-traffic-source");\n      const trafficMedium = document.getElementById("mmq-traffic-medium");\n      const trafficCampaign = document.getElementById("mmq-traffic-campaign");\n      const landingPage = document.getElementById("mmq-landing-page");\n      const referrerField = document.getElementById("mmq-referrer");\n      if(!form || form.dataset.mmqReady === "true") return;\n      form.dataset.mmqReady = "true";\n      function getParam(name){ return new URLSearchParams(window.location.search).get(name) || ""; }\n      function getHostname(url){ try { return new URL(url).hostname.toLowerCase(); } catch(error){ return ""; } }\n      function detectTraffic(){\n        const utmSource = getParam("utm_source");\n        const utmMedium = getParam("utm_medium");\n        const utmCampaign = getParam("utm_campaign");\n        const referrer = document.referrer || "";\n        const referrerHost = getHostname(referrer);\n        let source = ""; let medium = ""; let campaign = utmCampaign || "";\n        if(utmSource){ source = utmSource; medium = utmMedium || "campaign"; }\n        else if(referrerHost){\n          if(referrerHost.includes("google.")){ source="google"; medium="organic"; }\n          else if(referrerHost.includes("bing.")){ source="bing"; medium="organic"; }\n          else if(referrerHost.includes("yahoo.")){ source="yahoo"; medium="organic"; }\n          else if(referrerHost.includes("facebook.com")){ source="facebook"; medium="social"; }\n          else if(referrerHost.includes("instagram.com")){ source="instagram"; medium="social"; }\n          else if(referrerHost.includes("chatgpt.com") || referrerHost.includes("openai.com")){ source="chatgpt"; medium="referral"; }\n          else if(referrerHost.includes("modelmoving.com") || referrerHost.includes("carrd.co")){ source="modelmoving"; medium="internal"; }\n          else { source=referrerHost.replace(/^www\\./, ""); medium="referral"; }\n        } else { source="direct"; medium="none"; }\n        return {source, medium, campaign: campaign || "none", landingPage: window.location.href, referrer: referrer || "none"};\n      }\n      function populateAttribution(){\n        const a=detectTraffic();\n        if(trafficSource) trafficSource.value=a.source;\n        if(trafficMedium) trafficMedium.value=a.medium;\n        if(trafficCampaign) trafficCampaign.value=a.campaign;\n        if(landingPage) landingPage.value=a.landingPage;\n        if(referrerField) referrerField.value=a.referrer;\n        return a;\n      }\n      function sendAnalyticsEvent(name, params){ if(typeof window.gtag === "function") window.gtag("event", name, params || {}); }\n      let attribution=populateAttribution();\n      let formStarted=false;\n      form.addEventListener("input", function(){\n        if(formStarted) return;\n        formStarted=true;\n        sendAnalyticsEvent("modelmoving_form_start", {form_name:"Puerto Rico Mainland Moving Quote Form",route_page:"Puerto Rico Mainland Moving Quotes",service_area:"Puerto Rico Mainland",traffic_source:attribution.source,traffic_medium:attribution.medium,traffic_campaign:attribution.campaign,landing_page:attribution.landingPage});\n      });\n      form.addEventListener("submit", async function(event){\n        event.preventDefault();\n        attribution=populateAttribution();\n        const originalButtonHTML=submitButton ? submitButton.innerHTML : "Find My Puerto Rico Moving Quotes →";\n        if(submitButton){ submitButton.disabled=true; submitButton.textContent="Submitting..."; }\n        if(result){ result.textContent="Submitting your moving quote request..."; result.style.color="#244f7d"; }\n        try{\n          const formData=new FormData(form);\n          const formObject=Object.fromEntries(formData.entries());\n          const response=await fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(formObject)});\n          const data=await response.json();\n          if(!response.ok || !data.success) throw new Error(data.message || "The quote request could not be submitted.");\n          sendAnalyticsEvent("generate_lead", {form_name:"Puerto Rico Mainland Moving Quote Form",route_page:"Puerto Rico Mainland Moving Quotes",service_area:"Puerto Rico Mainland",lead_type:"Puerto Rico Mainland Moving Quote Request",traffic_source:attribution.source,traffic_medium:attribution.medium,traffic_campaign:attribution.campaign,landing_page:attribution.landingPage});\n          if(result){ result.textContent="Thank you! Your moving quote request has been received."; result.style.color="#2f7a3f"; }\n          form.reset();\n          attribution=populateAttribution();\n        }catch(error){\n          console.error("ModelMoving route form submission error:",error);\n          if(result){ result.textContent="Sorry, something went wrong. Please try again or email modelmoving@gmail.com."; result.style.color="#991b1b"; }\n        }finally{\n          if(submitButton){ submitButton.disabled=false; submitButton.innerHTML=originalButtonHTML; }\n        }\n      });\n    }\n    if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", initializeModelMovingRouteForm);\n    else initializeModelMovingRouteForm();\n  })();\n  </script>\n
 </body>
 </html>
