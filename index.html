@@ -790,6 +790,59 @@
       font-weight: 700;
     }
 
+
+    .trust-module {
+      background: linear-gradient(135deg, #fffdf7 0%, #ffffff 100%);
+      border: 1px solid rgba(199,154,59,.35);
+      border-radius: 24px;
+      padding: 34px;
+      box-shadow: 0 18px 48px rgba(16,43,74,.08);
+    }
+
+    .trust-module-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .trust-module-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .trust-module-item strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 5px;
+    }
+
+    .trust-module-item span {
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .trust-module-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .trust-module-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .trust-module-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 1050px) {
       .cluster-grid {
         grid-template-columns: repeat(2,minmax(0,1fr));
@@ -1192,6 +1245,45 @@
           <h3><a href="/moving-from-new-york-to-florida-guide.html">Moving From New York to Florida Guide</a></h3>
           <p>Plan a NY to FL move with details about New York pickup access, Florida delivery rules, timing, storage, and quote requests.</p>
           <p><a href="/moving-from-new-york-to-florida-guide.html" class="route-link">Read guide →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="trust-module">
+        <div class="pill">How ModelMoving helps</div>
+        <h2>Clear route help before you request moving quotes.</h2>
+        <p style="color:var(--muted);font-size:1.08rem;margin:0;">
+          ModelMoving helps customers organize long-distance moving requests around the route, timing, move size, access, packing, storage, and other details that can affect moving options.
+        </p>
+
+        <div class="trust-module-grid">
+          <div class="trust-module-item">
+            <strong>Route-focused matching</strong>
+            <span>Requests can be matched based on origin, destination, timing, availability, and move details.</span>
+          </div>
+
+          <div class="trust-module-item">
+            <strong>Clear quote-request process</strong>
+            <span>Customers submit the move details that help selected moving partners review the request more clearly.</span>
+          </div>
+
+          <div class="trust-module-item">
+            <strong>Planning ranges explained</strong>
+            <span>Selected route pages may include planning ranges informed by moving-sales experience and route-pricing patterns.</span>
+          </div>
+
+          <div class="trust-module-item">
+            <strong>Not ready for quotes yet?</strong>
+            <span>MoveReady offers a short readiness check so customers can identify planning gaps before deciding on quote help.</span>
+          </div>
+        </div>
+
+        <div class="trust-module-actions">
+          <a href="/how-modelmoving-works.html" class="btn btn-primary">How ModelMoving Works →</a>
+          <a href="https://moveready.modelmoving.com/?utm_source=route_hub&utm_medium=internal&utm_campaign=trust_module" class="btn btn-secondary">Check Your MoveReady Score →</a>
         </div>
       </div>
     </div>
@@ -1606,7 +1698,7 @@
 
         <div class="card hawaii-specialty">
           <h3><a href="/honolulu-mainland-moving-quotes/">Honolulu Mainland Moving Quotes</a></h3>
-          <p>Specialty moving quote request help for Honolulu to Honolulu moves, including Oahu, Waikiki, Pearl City, Kapolei, Ewa Beach, and nearby areas.</p>
+          <p>Specialty moving quote request help for Honolulu and Oahu moves to U.S. mainland destinations, including Waikiki, Pearl City, Kapolei, Ewa Beach, and nearby pickup areas.</p>
           <p><a href="/honolulu-mainland-moving-quotes/" class="route-link">Open route →</a></p>
         </div>
 
@@ -1636,7 +1728,7 @@
 
         <div class="card alaska-specialty">
           <h3><a href="/anchorage-mainland-moving-quotes/">Anchorage Mainland Moving Quotes</a></h3>
-          <p>Specialty moving quote request help for Anchorage to Anchorage moves, including Eagle River, Wasilla, Palmer, Chugiak, and nearby Alaska areas.</p>
+          <p>Specialty moving quote request help for Anchorage-area moves to U.S. mainland destinations, including Eagle River, Wasilla, Palmer, Chugiak, and nearby Alaska pickup areas.</p>
           <p><a href="/anchorage-mainland-moving-quotes/" class="route-link">Open route →</a></p>
         </div>
 
@@ -1877,7 +1969,7 @@
   </section>
 
   <div class="disclaimer">
-    ModelMoving is a moving quote request and matching platform. ModelMoving may connect customers with selected moving partners based on route, availability, timing, and move details. Moving partners are responsible for their own service details, estimates, availability, agreements, and pricing. No price or booking is guaranteed by ModelMoving.
+    ModelMoving is a moving quote request and matching platform that helps connect customers with selected moving partners based on route, availability, timing, and move details. Your request may be matched with available moving partners that can review your route and provide service details, availability, and pricing.
   </div>
 
   <footer class="footer">
