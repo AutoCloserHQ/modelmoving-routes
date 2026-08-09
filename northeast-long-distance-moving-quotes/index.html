@@ -625,6 +625,59 @@
       font-weight: 850;
     }
 
+
+    .trust-module {
+      background: linear-gradient(135deg, #fffdf7 0%, #ffffff 100%);
+      border: 1px solid rgba(199,154,59,.35);
+      border-radius: 24px;
+      padding: 34px;
+      box-shadow: 0 18px 48px rgba(16,43,74,.08);
+    }
+
+    .trust-module-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .trust-module-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .trust-module-item strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 5px;
+    }
+
+    .trust-module-item span {
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .trust-module-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .trust-module-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .trust-module-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 900px) {
       .cluster-grid,
       .parent-links {
@@ -712,8 +765,8 @@
     "mainEntity":[
       {
         "@type":"Question",
-        "name":"Is ModelMoving a moving company?",
-        "acceptedAnswer":{"@type":"Answer","text":"No. ModelMoving is a moving quote request and matching platform. We help organize your request and may connect you with selected moving partners based on route, timing, availability, and move details."}
+        "name":"What is ModelMoving?",
+        "acceptedAnswer":{"@type":"Answer","text":"ModelMoving is a moving quote request and matching platform that helps organize moving requests and may connect customers with selected moving partners based on route, timing, availability, and move details."}
       },
       {
         "@type":"Question",
@@ -1023,6 +1076,45 @@
     </div>
   </section>
 
+  <section>
+    <div class="container">
+      <div class="trust-module">
+        <div class="pill">How ModelMoving helps</div>
+        <h2>Clearer Northeast moving requests from route to quote.</h2>
+        <p style="color:var(--muted);font-size:1.08rem;margin:0;">
+          ModelMoving helps customers organize Northeast long-distance moves around the pickup market, destination, timing, inventory, access, packing, storage, and other details that can affect moving options.
+        </p>
+
+        <div class="trust-module-grid">
+          <div class="trust-module-item">
+            <strong>Route-focused matching</strong>
+            <span>Requests can be matched around Northeast pickup area, destination, timing, availability, and move details.</span>
+          </div>
+
+          <div class="trust-module-item">
+            <strong>Clear quote-request process</strong>
+            <span>Pickup, delivery, inventory, access, packing, storage, and special-item details can be submitted together.</span>
+          </div>
+
+          <div class="trust-module-item">
+            <strong>Planning ranges explained</strong>
+            <span>Selected route pages may include planning ranges informed by nationwide moving-sales experience and route-pricing patterns.</span>
+          </div>
+
+          <div class="trust-module-item">
+            <strong>Not ready for quotes yet?</strong>
+            <span>MoveReady offers a short readiness check so customers can identify planning gaps before deciding on quote help.</span>
+          </div>
+        </div>
+
+        <div class="trust-module-actions">
+          <a href="/how-modelmoving-works.html" class="btn btn-primary">How ModelMoving Works →</a>
+          <a href="https://moveready.modelmoving.com/?route=Northeast%20Long-Distance&amp;home=https%3A%2F%2Froutes.modelmoving.com%2Fnortheast-long-distance-moving-quotes%2F&amp;quote=https%3A%2F%2Froutes.modelmoving.com%2Fnortheast-long-distance-moving-quotes%2F%23quote&amp;utm_source=northeast_hub&amp;utm_medium=internal&amp;utm_campaign=trust_module" class="btn btn-secondary">Check Your MoveReady Score →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="cost" style="background: var(--soft);">
     <div class="container">
       <div class="center">
@@ -1063,7 +1155,7 @@
       <div class="note-box">
         <div class="icon">✓</div>
         <div>
-          These ModelMoving planning ranges are intended to help customers understand the possible scale of a Northeast long-distance move. They are not guaranteed prices or market averages. Final estimates, services, availability, and pricing come from the moving partner reviewing the actual route and inventory.
+          These ModelMoving planning ranges are intended to help customers understand the possible scale of a Northeast long-distance move. Moving partners reviewing the actual route and inventory provide their own estimates, services, availability, agreements, and final pricing.
         </div>
       </div>
     </div>
@@ -1127,8 +1219,8 @@
 
       <div class="faq">
         <div class="faq-item">
-          <h3>Is ModelMoving a moving company?</h3>
-          <p>No. ModelMoving is a moving quote request and matching platform. We help organize your request and may connect you with available moving partners.</p>
+          <h3>What is ModelMoving?</h3>
+          <p>ModelMoving is a moving quote request and matching platform that helps organize moving requests and may connect customers with selected moving partners based on route, timing, availability, and move details.</p>
         </div>
 
         <div class="faq-item">
@@ -1172,7 +1264,7 @@
   </section>
 
   <div class="disclaimer">
-    ModelMoving is a moving quote request and matching platform. ModelMoving may connect customers with selected moving partners based on route, availability, timing, and move details. Moving partners are responsible for their own service details, estimates, availability, agreements, and pricing. No price or booking is guaranteed by ModelMoving.
+    ModelMoving is a moving quote request and matching platform that helps connect customers with selected moving partners based on route, availability, timing, and move details. Your request may be matched with available moving partners that can review your route and provide service details, availability, and pricing.
   </div>
 
   <footer class="footer">
