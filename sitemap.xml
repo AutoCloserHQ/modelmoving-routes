@@ -3,21 +3,21 @@
 
   <url>
     <loc>https://routes.modelmoving.com/</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://routes.modelmoving.com/northeast-long-distance-moving-quotes/</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
   <loc>https://routes.modelmoving.com/how-modelmoving-works.html</loc>
-  <lastmod>2026-07-07</lastmod>
+  <lastmod>2026-08-09</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
@@ -108,7 +108,7 @@
 
   <url>
     <loc>https://routes.modelmoving.com/alaska-mainland-moving-quotes/</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -325,7 +325,7 @@
 
     <url>
     <loc>https://routes.modelmoving.com/puerto-rico-mainland-moving-quotes/</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -339,7 +339,7 @@
 
   <url>
     <loc>https://routes.modelmoving.com/puerto-rico-to-florida-moving-quotes/</loc>
-    <lastmod>2026-06-04</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -430,7 +430,7 @@
 
     <url>
     <loc>https://routes.modelmoving.com/long-island-long-distance-moving-quotes/</loc>
-    <lastmod>2026-06-07</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
@@ -577,7 +577,7 @@
 
   <url>
     <loc>https://routes.modelmoving.com/connecticut-to-texas-moving-quotes/</loc>
-    <lastmod>2026-06-08</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.84</priority>
   </url>
@@ -779,5 +779,39 @@
   </url>
 
 
+  <url>
+    <loc>https://routes.modelmoving.com/boston-to-miami-moving-quotes/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.86</priority>
+  </url>
+
+  <url>
+    <loc>https://routes.modelmoving.com/boston-to-orlando-moving-quotes/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.86</priority>
+  </url>
+
+  <url>
+    <loc>https://routes.modelmoving.com/florida-to-new-york-moving-quotes/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.86</priority>
+  </url>
+
+  <url>
+    <loc>https://routes.modelmoving.com/boston-to-fort-myers-moving-quotes/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.84</priority>
+  </url>
+
+  <url>
+    <loc>https://routes.modelmoving.com/alaska-to-washington-moving-quotes/</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.84</priority>
+  </url>
 
 </urlset>
