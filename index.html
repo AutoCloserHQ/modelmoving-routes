@@ -4,19 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Long-Distance Moving Routes &amp; Quote Help | ModelMoving</title>
-  <meta name="description" content="Search ModelMoving route guides for Northeast, Midwest, Florida, Texas, Hawaii, Alaska, Puerto Rico, and popular long-distance moving routes.">
+  <title>Long-Distance Moving Route Hub & Quote Help | ModelMoving</title>
+  <meta name="description" content="Browse ModelMoving long-distance moving route clusters for the Northeast, Midwest, Florida, Texas, Alaska, Hawaii, Puerto Rico, and 100+ state, city, and specialty moving quote pages.">
   <link rel="canonical" href="https://routes.modelmoving.com/">
 
   <link rel="icon" href="https://routes.modelmoving.com/ModelMoving-Logo.png" type="image/png">
   <link rel="apple-touch-icon" href="https://routes.modelmoving.com/ModelMoving-Logo.png">
   <meta property="og:image" content="https://routes.modelmoving.com/ModelMoving-Logo.png">
-  <meta property="og:title" content="Long-Distance Moving Routes &amp; Quote Help | ModelMoving">
+  <meta property="og:title" content="Long-Distance Moving Route Hub &amp; Quote Help | ModelMoving">
   <meta property="og:description" content="Search route guides and request long-distance moving quote help for regional, interstate, island, and specialty moves.">
   <meta property="og:url" content="https://routes.modelmoving.com/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://routes.modelmoving.com/ModelMoving-Logo.png">
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJPYXXWGEV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KJPYXXWGEV');
+  </script>
 
   <style>
     :root {
@@ -697,6 +706,102 @@
       font-size: .9rem;
     }
 
+
+    .updated {
+      color: var(--muted);
+      font-size: .86rem;
+      font-weight: 700;
+      margin-top: 12px;
+    }
+
+    .cluster-grid {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 20px;
+    }
+
+    .cluster-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 26px;
+      box-shadow: 0 16px 45px rgba(16,43,74,.05);
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+
+    .cluster-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(199,154,59,.65);
+      box-shadow: 0 22px 55px rgba(16,43,74,.10);
+    }
+
+    .cluster-card.featured {
+      border: 2px solid rgba(199,154,59,.72);
+      background: linear-gradient(180deg,rgba(199,154,59,.12),#fff 45%);
+    }
+
+    .cluster-card h3 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-family: Georgia,'Times New Roman',serif;
+      font-size: 1.55rem;
+      line-height: 1.15;
+    }
+
+    .cluster-card p {
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    .cluster-card a {
+      color: var(--navy);
+      font-weight: 900;
+    }
+
+    .cluster-card a:hover {
+      color: var(--gold);
+    }
+
+    .cluster-mini-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .cluster-mini-links a {
+      display: inline-flex;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: var(--soft);
+      border: 1px solid var(--border);
+      font-size: .78rem;
+      font-weight: 850;
+    }
+
+    .hierarchy-note {
+      margin-top: 26px;
+      background: #fff7e4;
+      border: 1px solid rgba(199,154,59,.35);
+      border-left: 5px solid var(--gold);
+      border-radius: 18px;
+      padding: 20px 22px;
+      color: #3b4c61;
+      font-weight: 700;
+    }
+
+    @media (max-width: 1050px) {
+      .cluster-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+      }
+    }
+
+    @media (max-width: 680px) {
+      .cluster-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 980px) {
       .hero-grid,
       .trust-grid,
@@ -802,9 +907,28 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "ModelMoving Long-Distance Moving Quote Routes",
-    "description": "Explore route-based long-distance moving quote request pages for Northeast, Midwest, Ohio, Michigan, Long Island, Westchester, Fairfield County, North Jersey, Boston, Florida, South Florida, Texas, North Carolina, South Carolina, Hawaii, Alaska, Puerto Rico, and popular state-to-state relocation routes.",
+    "@id": "https://routes.modelmoving.com/#webpage",
+    "name": "ModelMoving Long-Distance Moving Route Hub",
+    "headline": "Explore Long-Distance Moving Routes",
+    "description": "Parent route hub for ModelMoving regional, state-to-state, city-to-state, island, and specialty moving quote pages.",
     "url": "https://routes.modelmoving.com/",
+    "dateModified": "2026-08-08",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://modelmoving.com/#website",
+      "name": "ModelMoving",
+      "url": "https://modelmoving.com/"
+    },
+    "about": [
+      {"@type":"Thing","name":"Long-distance moving routes"},
+      {"@type":"Thing","name":"Northeast moving routes"},
+      {"@type":"Thing","name":"Midwest moving routes"},
+      {"@type":"Thing","name":"Florida moving routes"},
+      {"@type":"Thing","name":"Texas moving routes"},
+      {"@type":"Thing","name":"Alaska moving routes"},
+      {"@type":"Thing","name":"Hawaii moving routes"},
+      {"@type":"Thing","name":"Puerto Rico moving routes"}
+    ],
     "publisher": {
       "@type": "Organization",
       "name": "ModelMoving",
@@ -834,6 +958,7 @@
     <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
 
     <nav class="nav-links" id="navLinks">
+      <a href="#clusters">Clusters</a>
       <a href="#guides">Guides</a>
       <a href="#routes">Routes</a>
       <a href="#quote-help">Quote Help</a>
@@ -844,14 +969,13 @@
   <main class="hero">
     <div class="hero-grid">
       <div>
-        <div class="eyebrow">ModelMoving route hub</div>
+        <div class="eyebrow">ModelMoving long-distance route hub</div>
         <h1>Explore Moving Routes</h1>
 
         <p class="hero-copy">
-          Search regional, interstate, island, and specialty moving guides by pickup area,
-          destination, city, or state. Choose the closest route to organize your move details
-          and request free, no-obligation quote help.
+          Start with a major route cluster, then move into the most specific state, city, or specialty page for your relocation. ModelMoving organizes regional, interstate, island, and destination-based moving quote pages around the route that best matches your move.
         </p>
+        <div class="updated">Updated August 8, 2026 · Main parent hub for the ModelMoving route network.</div>
 
         <div class="checks">
           <div class="check"><span>✓</span> Free, no-obligation moving quote requests</div>
@@ -867,7 +991,7 @@
 
       <aside class="form-card">
         <h2>Find Your Route</h2>
-        <p>Search all 107 route pages by state, city, region, or destination.</p>
+        <p>Search the full route library by state, city, region, or destination.</p>
 
         <div class="hero-finder">
           <label for="routeSearch">Search the route library</label>
@@ -884,7 +1008,7 @@
             <button class="filter-chip" type="button" data-filter="Alaska">Alaska</button>
             <button class="filter-chip" type="button" data-filter="Puerto Rico">Puerto Rico</button>
           </div>
-          <div class="route-count" id="routeCount" aria-live="polite">Showing all 107 route pages.</div>
+          <div class="route-count" id="routeCount" aria-live="polite">Loading route library...</div>
         </div>
       </aside>
     </div>
@@ -925,6 +1049,121 @@
       </div>
     </div>
   </div>
+
+  <section id="clusters">
+    <div class="container">
+      <div class="center">
+        <div class="pill">Browse by route cluster</div>
+        <h2>Start with the major route family closest to your move.</h2>
+        <p>
+          These parent and destination clusters organize the route library so you can move from broad regional intent into the most specific state, city, or specialty route page.
+        </p>
+      </div>
+
+      <div class="cluster-grid">
+
+        <div class="cluster-card featured">
+          <h3><a href="/northeast-long-distance-moving-quotes/">Northeast Routes</a></h3>
+          <p>Parent hub for New Jersey, New York, Pennsylvania, Connecticut, Massachusetts, Delaware, Long Island, Westchester, Fairfield County, North Jersey, and Boston.</p>
+          <div class="cluster-mini-links">
+            <a href="/northeast-long-distance-moving-quotes/">Open Northeast Hub</a>
+            <a href="/new-york-long-distance-moving-quotes/">New York</a>
+            <a href="/new-jersey-long-distance-moving-quotes/">New Jersey</a>
+          </div>
+        </div>
+
+        <div class="cluster-card featured">
+          <h3>Florida-Bound Routes</h3>
+          <p>High-intent Florida destination pages from Northeast and Midwest pickup markets.</p>
+          <div class="cluster-mini-links">
+            <a href="/new-york-to-florida-moving-quotes/">NY → Florida</a>
+            <a href="/new-jersey-to-florida-moving-quotes/">NJ → Florida</a>
+            <a href="/long-island-to-florida-moving-quotes/">Long Island → Florida</a>
+            <a href="/boston-to-florida-moving-quotes/">Boston → Florida</a>
+          </div>
+        </div>
+
+        <div class="cluster-card">
+          <h3>Texas-Bound Routes</h3>
+          <p>State, metro, and Dallas–Fort Worth route pages for Northeast and Midwest pickups heading to Texas.</p>
+          <div class="cluster-mini-links">
+            <a href="/new-york-to-texas-moving-quotes/">NY → Texas</a>
+            <a href="/new-jersey-to-texas-moving-quotes/">NJ → Texas</a>
+            <a href="/pennsylvania-to-texas-moving-quotes/">PA → Texas</a>
+            <a href="/new-york-to-dallas-fort-worth-moving-quotes/">NY → DFW</a>
+          </div>
+        </div>
+
+        <div class="cluster-card">
+          <h3><a href="/midwest-long-distance-moving-quotes/">Midwest Routes</a></h3>
+          <p>Parent hub for Ohio, Michigan, Cleveland, Detroit, Ann Arbor, Columbus, Cincinnati, Dayton, Toledo, Grand Rapids, Lansing, and nearby routes.</p>
+          <div class="cluster-mini-links">
+            <a href="/midwest-long-distance-moving-quotes/">Open Midwest Hub</a>
+            <a href="/ohio-long-distance-moving-quotes/">Ohio</a>
+            <a href="/michigan-long-distance-moving-quotes/">Michigan</a>
+          </div>
+        </div>
+
+        <div class="cluster-card featured">
+          <h3><a href="/alaska-mainland-moving-quotes/">Alaska Routes</a></h3>
+          <p>Parent hub for mainland-to-Alaska, Northeast-to-Alaska, West Coast-to-Alaska, and Anchorage specialty routes.</p>
+          <div class="cluster-mini-links">
+            <a href="/alaska-mainland-moving-quotes/">Open Alaska Hub</a>
+            <a href="/new-jersey-to-alaska-moving-quotes/">NJ → Alaska</a>
+            <a href="/new-york-to-alaska-moving-quotes/">NY → Alaska</a>
+            <a href="/mainland-to-anchorage-moving-quotes/">Mainland → Anchorage</a>
+          </div>
+        </div>
+
+        <div class="cluster-card">
+          <h3><a href="/hawaii-mainland-moving-quotes/">Hawaii Routes</a></h3>
+          <p>Hawaii mainland, state-to-Hawaii, Honolulu, and mainland-to-Honolulu specialty moving quote pages.</p>
+          <div class="cluster-mini-links">
+            <a href="/hawaii-mainland-moving-quotes/">Hawaii Mainland</a>
+            <a href="/california-to-hawaii-moving-quotes/">CA → Hawaii</a>
+            <a href="/new-york-to-hawaii-moving-quotes/">NY → Hawaii</a>
+            <a href="/mainland-to-honolulu-moving-quotes/">Mainland → Honolulu</a>
+          </div>
+        </div>
+
+        <div class="cluster-card">
+          <h3><a href="/puerto-rico-mainland-moving-quotes/">Puerto Rico Routes</a></h3>
+          <p>Mainland-to-Puerto Rico and Puerto Rico-to-mainland quote pages, including Florida, New York, and New Jersey routes.</p>
+          <div class="cluster-mini-links">
+            <a href="/puerto-rico-mainland-moving-quotes/">Puerto Rico Mainland</a>
+            <a href="/florida-to-puerto-rico-moving-quotes/">FL → Puerto Rico</a>
+            <a href="/puerto-rico-to-florida-moving-quotes/">Puerto Rico → FL</a>
+          </div>
+        </div>
+
+        <div class="cluster-card">
+          <h3>Carolinas Routes</h3>
+          <p>North Carolina and South Carolina destination pages from New York, New Jersey, Pennsylvania, Massachusetts, and Connecticut.</p>
+          <div class="cluster-mini-links">
+            <a href="/new-jersey-to-north-carolina-moving-quotes/">NJ → NC</a>
+            <a href="/new-york-to-north-carolina-moving-quotes/">NY → NC</a>
+            <a href="/new-jersey-to-south-carolina-moving-quotes/">NJ → SC</a>
+            <a href="/new-york-to-south-carolina-moving-quotes/">NY → SC</a>
+          </div>
+        </div>
+
+        <div class="cluster-card">
+          <h3>Moving Guides</h3>
+          <p>Start with process and planning guides when you want broader information before choosing an exact route page.</p>
+          <div class="cluster-mini-links">
+            <a href="/how-modelmoving-works.html">How ModelMoving Works</a>
+            <a href="/how-long-distance-moving-quotes-work.html">How Quotes Work</a>
+            <a href="/moving-from-new-york-to-florida-guide.html">NY → Florida Guide</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hierarchy-note">
+        <strong>How the route network is organized:</strong> Main Route Hub → regional or specialty parent hub → state or metro page → exact destination route when available. If you already know your exact route, use the most specific page in the library below.
+      </div>
+    </div>
+  </section>
 
   <section id="guides" class="section-soft">
     <div class="container">
@@ -1552,8 +1791,8 @@
         </div>
 
         <div class="card featured">
-          <h3><a href="/alaska-mainland-moving-quotes/">Alaska Mainland Moving Quotes</a></h3>
-          <p>Alaska to mainland and mainland to Alaska moving quote requests.</p>
+          <h3><a href="/alaska-mainland-moving-quotes/">Alaska Moving Routes & Mainland Quotes</a></h3>
+          <p>Parent hub for Alaska to mainland, mainland to Alaska, Northeast-to-Alaska, and Anchorage specialty route pages.</p>
           <p><a href="/alaska-mainland-moving-quotes/" class="route-link">Open route →</a></p>
         </div>
 
@@ -1638,7 +1877,7 @@
   </section>
 
   <div class="disclaimer">
-    ModelMoving is a moving quote request and matching platform that helps connect customers with selected moving partners based on route, availability, timing, and move details. Your request may be matched with available moving partners that can review your route and provide service details, availability, and pricing.
+    ModelMoving is a moving quote request and matching platform, not a motor carrier. ModelMoving may connect customers with selected moving partners based on route, availability, timing, and move details. Moving partners are responsible for their own service details, estimates, availability, agreements, and pricing. No price or booking is guaranteed by ModelMoving.
   </div>
 
   <footer class="footer">
