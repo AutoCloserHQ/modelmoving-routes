@@ -238,6 +238,59 @@
       background:#fffaf0;
     }
 
+
+    .trust-module {
+      background: linear-gradient(135deg, #fffdf7 0%, #ffffff 100%);
+      border: 1px solid rgba(199,154,59,.35);
+      border-radius: 24px;
+      padding: 34px;
+      box-shadow: 0 18px 48px rgba(16,43,74,.08);
+    }
+
+    .trust-module-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .trust-module-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    .trust-module-item strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 5px;
+    }
+
+    .trust-module-item span {
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .trust-module-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .trust-module-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .trust-module-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width:900px){
       .hub-grid{grid-template-columns:1fr;}
     }
@@ -479,6 +532,45 @@
     </div>
   </section>
 
+  <section>
+    <div class="container">
+      <div class="trust-module">
+        <div class="pill">How ModelMoving helps</div>
+        <h2>Clearer Alaska moving requests from route to quote.</h2>
+        <p style="color:var(--muted);font-size:1.08rem;margin:0;">
+          ModelMoving helps customers organize Alaska mainland moves around exact origin and destination, timing, inventory, access, packing, storage, seasonal conditions, and other details that can affect moving options.
+        </p>
+
+        <div class="trust-module-grid">
+          <div class="trust-module-item">
+            <strong>Route-focused matching</strong>
+            <span>Requests can be matched around Alaska city, mainland destination, timing, availability, and move details.</span>
+          </div>
+
+          <div class="trust-module-item">
+            <strong>Clear quote-request process</strong>
+            <span>Pickup, delivery, inventory, access, packing, storage, and specialty-item details can be submitted together.</span>
+          </div>
+
+          <div class="trust-module-item">
+            <strong>Specialty-route planning</strong>
+            <span>Alaska moves may involve seasonal timing, weather, route availability, storage, and access considerations that are useful to share early.</span>
+          </div>
+
+          <div class="trust-module-item">
+            <strong>Not ready for quotes yet?</strong>
+            <span>MoveReady offers a short readiness check so customers can identify planning gaps before deciding on quote help.</span>
+          </div>
+        </div>
+
+        <div class="trust-module-actions">
+          <a href="/how-modelmoving-works.html" class="btn btn-primary">How ModelMoving Works →</a>
+          <a href="https://moveready.modelmoving.com/?route=Alaska%20%E2%86%94%20Mainland&amp;home=https%3A%2F%2Froutes.modelmoving.com%2Falaska-mainland-moving-quotes%2F&amp;quote=https%3A%2F%2Froutes.modelmoving.com%2Falaska-mainland-moving-quotes%2F%23quote&amp;utm_source=alaska_hub&amp;utm_medium=internal&amp;utm_campaign=trust_module" class="btn btn-secondary">Check Your MoveReady Score →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 <section id="routes" style="background:var(--soft);"><div class="container"><div class="center"><div class="pill">Popular route details</div><h2>Alaska pickup areas and mainland destinations.</h2><p>Route, access, timing, and inventory details can change how a moving request is reviewed. These examples help organize the common details for this lane.</p></div><div class="cards"><div class="card"><h3>Common pickup areas</h3><ul><li>Anchorage area homes and storage units</li><li>Fairbanks and Interior Alaska moves</li><li>Juneau / Southeast Alaska when available</li><li>Military, family, and relocation moves</li><li>Partial shipments or full households</li></ul></div><div class="card"><h3>Common destination areas</h3><ul><li>Washington and West Coast destinations</li><li>California delivery routes</li><li>Texas, Florida, and East Coast moves</li><li>Storage before mainland delivery</li><li>Mainland homes, apartments, condos, and facilities</li></ul></div><div class="card"><h3>Popular route combinations</h3><ul><li>Anchorage to Mainland U.S.</li><li>Fairbanks to Washington</li><li>Alaska to California</li><li>Alaska to Texas</li><li>Alaska to Florida / East Coast</li></ul></div></div></div></section>
 
   <section id="cost">
@@ -494,7 +586,7 @@
         <div class="cost-card"><h3>Season and timing</h3><p>Requested dates, flexibility, weather, road or route conditions, storage needs, and moving-partner availability can affect options.</p></div>
         <div class="cost-card"><h3>Access and services</h3><p>Remote access, stairs, long carries, parking, packing, storage, special items, and other requested services may affect the quote.</p></div>
       </div>
-      <div class="note-box"><div class="icon">✓</div><div>ModelMoving does not set or guarantee moving prices. Any estimate, service details, availability, agreement, or final pricing comes from the moving partner reviewing the request.</div></div>
+      <div class="note-box"><div class="icon">✓</div><div>Moving partners reviewing the request provide their own estimates, service details, availability, agreements, and final pricing based on the actual route, shipment, access, requested services, season, and timing.</div></div>
     </div>
   </section>
 
@@ -578,7 +670,7 @@
 
   <section><div class="container"><div class="cta"><div><h2>Ready to request Alaska mainland moving quote options?</h2><p>Submit the exact Alaska and mainland locations, dates, inventory, access, packing, storage, and specialty-item details.</p></div><a href="#quote" class="btn">Find My Alaska Mainland Moving Quotes →</a></div></div></section>
 
-  <div class="disclaimer">ModelMoving is a moving quote request and matching platform. ModelMoving may connect customers with selected moving partners based on route, availability, timing, and move details. Moving partners are responsible for their own service details, estimates, availability, agreements, and pricing. No price or booking is guaranteed by ModelMoving.</div>
+  <div class="disclaimer">ModelMoving is a moving quote request and matching platform that helps connect customers with selected moving partners based on route, availability, timing, and move details. Your request may be matched with available moving partners that can review your route and provide service details, availability, and pricing.</div>
   <footer class="footer">© 2026 ModelMoving. Long-distance moving quote requests and route-based moving partner matching.</footer>
   <script>
   (function(){
