@@ -422,13 +422,6 @@
       margin: 0 0 6px;
     }
 
-    .price {
-      font-size: 2rem;
-      font-weight: 900;
-      color: var(--navy);
-      margin: 6px 0 10px;
-    }
-
     .note-box {
       margin-top: 22px;
       background: white;
@@ -513,7 +506,6 @@
       text-align: center;
       font-size: .9rem;
     }
-
 
     .breadcrumb {
       max-width:1220px;
@@ -735,6 +727,14 @@
           <input type="hidden" name="service_area" value="Hawaii / Mainland">
           <input type="hidden" name="lead_type" value="Hawaii Mainland Moving Quote Request">
 
+          <!-- Attribution -->
+          <input type="hidden" name="traffic_source" id="traffic_source" value="direct">
+          <input type="hidden" name="traffic_medium" id="traffic_medium" value="none">
+          <input type="hidden" name="traffic_campaign" id="traffic_campaign" value="none">
+          <input type="hidden" name="traffic_content" id="traffic_content" value="none">
+          <input type="hidden" name="landing_page" id="landing_page" value="">
+          <input type="hidden" name="referrer" id="referrer" value="none">
+
           <div class="form-grid">
             <div>
               <label>Pickup ZIP / City</label>
@@ -788,7 +788,7 @@
           </div>
 
           <button type="submit">Find My Hawaii Moving Quotes →</button>
-          <div class="secure">🔒 Your information is secure. No obligation.By submitting this form, you agree that ModelMoving and selected moving partners may contact you about your moving quote request by phone, text, or email. Message/data rates may apply. Consent is not required to purchase services.</div>
+          <div class="secure">🔒 Your information is secure. No obligation. By submitting this form, you agree that ModelMoving and selected moving partners may contact you about your moving quote request by phone, text, or email. Message/data rates may apply. Consent is not required to purchase services.</div>
         </form>
       </aside>
     </div>
@@ -889,7 +889,6 @@
     </div>
   </section>
 
-
   <section>
     <div class="container split">
       <div>
@@ -942,7 +941,7 @@
       <div class="note-box">
         <div class="icon">✓</div>
         <div>
-          ModelMoving does not set or guarantee moving prices. Any estimate, service details, availability, agreement, or final pricing comes from the moving partner reviewing the request.
+          Final estimates, service details, availability, agreements, and pricing are provided by the moving partner reviewing the request.
         </div>
       </div>
     </div>
@@ -1086,12 +1085,45 @@
   </section>
 
   <div class="disclaimer">
-    ModelMoving is a moving quote request and matching platform. ModelMoving may connect customers with selected moving partners based on route, availability, timing, and move details. Moving partners are responsible for their own service details, estimates, availability, agreements, and pricing. No price or booking is guaranteed by ModelMoving.
+    ModelMoving is a moving quote request and matching platform that helps connect customers with selected moving partners based on route, availability, timing, and move details. Your request may be matched with available moving partners that can review your route and provide service details, availability, and pricing.
   </div>
 
   <footer class="footer">
     © 2026 ModelMoving. Long-distance moving quote requests and route-based moving partner matching.
   </footer>
+
+  <script>
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+
+    const source = params.get('utm_source') || sessionStorage.getItem('mm_utm_source') || 'direct';
+    const medium = params.get('utm_medium') || sessionStorage.getItem('mm_utm_medium') || 'none';
+    const campaign = params.get('utm_campaign') || sessionStorage.getItem('mm_utm_campaign') || 'none';
+    const content = params.get('utm_content') || sessionStorage.getItem('mm_utm_content') || 'none';
+
+    if (params.get('utm_source')) sessionStorage.setItem('mm_utm_source', params.get('utm_source'));
+    if (params.get('utm_medium')) sessionStorage.setItem('mm_utm_medium', params.get('utm_medium'));
+    if (params.get('utm_campaign')) sessionStorage.setItem('mm_utm_campaign', params.get('utm_campaign'));
+    if (params.get('utm_content')) sessionStorage.setItem('mm_utm_content', params.get('utm_content'));
+
+    const referrer =
+      document.referrer && !document.referrer.includes(window.location.hostname)
+        ? document.referrer
+        : 'none';
+
+    const setField = (id, value) => {
+      const field = document.getElementById(id);
+      if (field) field.value = value;
+    };
+
+    setField('traffic_source', source);
+    setField('traffic_medium', medium);
+    setField('traffic_campaign', campaign);
+    setField('traffic_content', content);
+    setField('landing_page', window.location.href);
+    setField('referrer', referrer);
+  })();
+  </script>
 
 </body>
 </html>
