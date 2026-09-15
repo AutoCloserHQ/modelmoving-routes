@@ -276,6 +276,12 @@
           <input type="hidden" name="route_page" value="New Jersey to Florida Moving Quotes">
           <input type="hidden" name="service_area" value="New Jersey to Florida">
           <input type="hidden" name="lead_type" value="New Jersey to Florida Moving Quotes Request">
+          <input type="hidden" name="traffic_source" id="traffic_source">
+          <input type="hidden" name="traffic_medium" id="traffic_medium">
+          <input type="hidden" name="traffic_campaign" id="traffic_campaign">
+          <input type="hidden" name="traffic_content" id="traffic_content">
+          <input type="hidden" name="landing_page" id="landing_page">
+          <input type="hidden" name="referrer" id="referrer">
           <div class="form-grid">
             <div><label>Pickup ZIP / City</label><input type="text" name="pickup_zip" placeholder="Pickup city or ZIP" required></div>
             <div><label>Delivery ZIP / City</label><input type="text" name="delivery_zip" placeholder="Delivery city or ZIP" required></div>
@@ -397,5 +403,24 @@
 
   <div class="disclaimer">ModelMoving is a moving quote request and matching platform. ModelMoving may connect customers with selected moving partners based on route, availability, timing, and move details. Moving partners are responsible for their own service details, estimates, availability, agreements, and pricing. No price or booking is guaranteed by ModelMoving.</div>
   <footer class="footer">© 2026 ModelMoving. Long-distance moving quote requests and route-based moving partner matching.</footer>
+
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const attribution = {
+        traffic_source: params.get('utm_source') || '',
+        traffic_medium: params.get('utm_medium') || '',
+        traffic_campaign: params.get('utm_campaign') || '',
+        traffic_content: params.get('utm_content') || '',
+        landing_page: window.location.href,
+        referrer: document.referrer || ''
+      };
+      Object.keys(attribution).forEach(function (key) {
+        const field = document.getElementById(key);
+        if (field) field.value = attribution[key];
+      });
+    })();
+  </script>
+
 </body>
 </html>
