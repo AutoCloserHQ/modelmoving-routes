@@ -13,6 +13,15 @@
   <meta property="og:image" content="https://routes.modelmoving.com/ModelMoving-Logo.png">
   <meta name="twitter:image" content="https://routes.modelmoving.com/ModelMoving-Logo.png">
 
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KJPYXXWGEV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KJPYXXWGEV');
+  </script>
+
   <style>
     :root {
       --navy: #102b4a;
@@ -545,6 +554,7 @@
     "name": "New York to Puerto Rico Moving Quotes",
     "description": "Request New York to Puerto Rico moving quote options for long-distance and island relocation moves from New York to Puerto Rico.",
     "url": "https://routes.modelmoving.com/new-york-to-puerto-rico-moving-quotes/",
+    "dateModified": "2026-09-24",
     "publisher": {
       "@type": "Organization",
       "name": "ModelMoving",
@@ -754,53 +764,16 @@
           <p>Helpful for requests to Ponce, Mayagüez, Aguadilla, Arecibo, Caguas, Humacao, and other Puerto Rico municipalities.</p>
         </div>
       </div>
+      <p style="margin-top:22px"><a href="/puerto-rico-mainland-moving-quotes/">Explore Puerto Rico &amp; mainland moves</a> · <a href="/pennsylvania-to-puerto-rico-moving-quotes/">Pennsylvania to Puerto Rico</a> · <a href="/connecticut-to-puerto-rico-moving-quotes/">Connecticut to Puerto Rico</a> · <a href="/massachusetts-to-puerto-rico-moving-quotes/">Massachusetts to Puerto Rico</a> · <a href="/how-modelmoving-works.html">How ModelMoving Works</a></p>
     </div>
   </section>
 
   <section id="cost" style="background: var(--soft);">
     <div class="container">
       <div class="center">
-        <div class="pill">Moving cost guide</div>
-        <h2>How much does a New York to Puerto Rico move cost?</h2>
-        <p>
-          New York to Puerto Rico moving costs vary based on shipment size, origin and destination access,
-          Puerto Rico location, packing, storage, move date, route demand, and provider availability.
-          These ranges are general planning examples only.
-        </p>
-      </div>
-
-      <div class="cost-grid">
-        <div class="cost-card">
-          <h3>Studio / 1 Bedroom</h3>
-          <div class="price">$4,000–$8,500+</div>
-          <p>Smaller NY to PR shipments may vary based on minimums, origin access, Puerto Rico destination, and timing.</p>
-        </div>
-
-        <div class="cost-card">
-          <h3>2 Bedroom</h3>
-          <div class="price">$7,500–$14,000+</div>
-          <p>Pricing depends on inventory volume, pickup/delivery access, packing, storage, destination municipality, and availability.</p>
-        </div>
-
-        <div class="cost-card">
-          <h3>3 Bedroom</h3>
-          <div class="price">$11,500–$21,000+</div>
-          <p>Larger household moves may require more detailed inventory review, access notes, shipment planning, and scheduling flexibility.</p>
-        </div>
-
-        <div class="cost-card">
-          <h3>4+ Bedroom / Large Move</h3>
-          <div class="price">$17,000–$32,000+</div>
-          <p>Large homes, specialty items, packing, storage, island delivery access, and tight timing can affect quote options.</p>
-        </div>
-      </div>
-
-      <div class="note-box">
-        <div class="icon">✓</div>
-        <div>
-          Estimated ranges are for general planning only. Final pricing depends on move details, route, shipment size,
-          service availability, origin/destination access, packing, storage, Puerto Rico destination, and provider pricing.
-        </div>
+        <div class="pill">Plan your request</div>
+        <h2>What details affect a New York to Puerto Rico moving quote?</h2>
+        <p>Share the shipment inventory, packing or storage needs, New York pickup access, Puerto Rico municipality, delivery access, and preferred timing. A moving partner can review the actual scope and discuss service options and pricing for your move.</p>
       </div>
     </div>
   </section>
@@ -850,8 +823,8 @@
 
       <div class="faq">
         <div class="faq-item">
-          <h3>Is ModelMoving a moving company?</h3>
-          <p>No. ModelMoving is a moving quote request and matching platform. We help organize your request and may connect you with available moving partners.</p>
+          <h3>How does ModelMoving help with this move?</h3>
+          <p>ModelMoving helps organize your quote request around the route, shipment, timing, and access details and may connect you with selected moving partners.</p>
         </div>
 
         <div class="faq-item">
@@ -902,5 +875,26 @@
     © 2026 ModelMoving. Long-distance moving quote requests and route-based moving partner matching.
   </footer>
 
+  <script>
+  (function(){
+    var form = document.querySelector('form[action="https://api.web3forms.com/submit"]');
+    if (!form) return;
+    var started = false;
+    form.addEventListener('input', function(){
+      if (started) return;
+      started = true;
+      if (typeof window.gtag === 'function') window.gtag('event', 'modelmoving_form_start', {
+        form_name: 'New York to Puerto Rico Moving Quote Form',
+        route_page: 'New York to Puerto Rico Moving Quotes'
+      });
+    });
+    form.addEventListener('submit', function(){
+      if (typeof window.gtag === 'function') window.gtag('event', 'modelmoving_form_submit', {
+        form_name: 'New York to Puerto Rico Moving Quote Form',
+        route_page: 'New York to Puerto Rico Moving Quotes'
+      });
+    });
+  })();
+  </script>
 </body>
 </html>
