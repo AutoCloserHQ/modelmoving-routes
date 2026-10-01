@@ -427,6 +427,10 @@
       margin-bottom: 10px;
     }
 
+    [hidden] { display: none !important; }
+    #routes { scroll-margin-top: 110px; }
+    #viewRouteResults { display: inline-block; margin-top: 14px; }
+
     .route-search-wrap {
       display: flex;
       gap: 12px;
@@ -1065,6 +1069,7 @@
             <button class="filter-chip" type="button" data-filter="Puerto Rico">Puerto Rico</button>
           </div>
           <div class="route-count" id="routeCount" aria-live="polite">Loading route library...</div>
+          <a id="viewRouteResults" href="#routes" class="route-link" hidden>View matching routes ↓</a>
         </div>
       </aside>
     </div>
@@ -2218,6 +2223,11 @@
 
   <script>
     const routeSearch = document.getElementById('routeSearch');
+    const routeSection = document.getElementById('routes');
+    const routeSectionHome = document.createComment('Route library original position');
+    routeSection.before(routeSectionHome);
+    const searchHero = document.querySelector('main.hero');
+    const viewRouteResults = document.getElementById('viewRouteResults');
     const clearRouteSearch = document.getElementById('clearRouteSearch');
     const routeCards = Array.from(document.querySelectorAll('#routeCards .card'));
     const routeCount = document.getElementById('routeCount');
@@ -2233,6 +2243,14 @@
     function filterRoutes() {
       const query = normalizeText(routeSearch.value);
       let visibleCount = 0;
+
+      // Show filtered routes immediately after the finder; restore the browsing layout on Clear.
+      if (query) {
+        if (searchHero.nextElementSibling !== routeSection) searchHero.after(routeSection);
+      } else {
+        routeSectionHome.after(routeSection);
+      }
+      viewRouteResults.hidden = !query;
 
       routeCards.forEach(card => {
         const cardText = normalizeText(card.textContent);
@@ -2256,6 +2274,12 @@
     }
 
     routeSearch.addEventListener('input', filterRoutes);
+    routeSearch.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' && normalizeText(routeSearch.value)) {
+        event.preventDefault();
+        routeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
 
     filterChips.forEach(chip => {
       chip.addEventListener('click', function() {
